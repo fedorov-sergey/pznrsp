@@ -17,60 +17,98 @@
         .hero-section {
             background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
             color: white;
-            padding: 80px 0;
+            padding: 80px 0 60px;
         }
         .boosty-card {
             background-color: #fff;
-            border-left: 5px solid #ff7a00; /* Фирменный оранжевый Boosty */
+            border-left: 5px solid #ff7a00;
         }
         .footer {
             background-color: #212529;
             color: #adb5bd;
         }
-        .footer a {
-            color: #adb5bd;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.5rem;
+        
+        /* Стили для логотипа (капс, размер, разрежение) */
+        .navbar-brand {
+            font-size: 1.3rem !important;
+            letter-spacing: 1.5px;
         }
-        .footer a:hover {
-            color: #ffffff;
+
+        /* Адаптация меню-шторки для компьютеров (чтобы оно было обычным верхним меню) */
+        @media (min-width: 992px) {
+            .offcanvas-lg {
+                position: static;
+                transform: none !important;
+                visibility: visible !important;
+                background-color: transparent !important;
+                width: auto !important;
+                border: 0 !important;
+            }
+            .offcanvas-lg .offcanvas-body {
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+            }
+            .offcanvas-lg .navbar-nav {
+                flex-direction: row;
+            }
+            .offcanvas-lg .nav-link {
+                color: rgba(255,255,255,.75) !important;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .offcanvas-lg .nav-link:hover {
+                color: #ffffff !important;
+            }
+            .offcanvas-lg .btn-warning {
+                margin-left: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- НАВИГАЦИЯ (Меню) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
                 <i class="bi bi-bar-chart-fill"></i> Анализ смет
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Кнопка бургера (работает только на мобильных) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="videos.html">Видео-инструкции</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" href="https://boosty.to/ТВОЯ_ССЫЛКА" target="_blank">
-                            <i class="bi bi-heart-fill"></i> Boosty
-                        </a>
-                    </li>
-                </ul>
+            
+            <!-- Само меню (на компе видно сразу, на мобильном - шторка справа) -->
+            <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title text-uppercase">Меню</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="videos.html">Видео-инструкции</a>
+                        </li>
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <!-- ЗАМЕНИ # НА ССЫЛКУ BOOSTY -->
+                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="#" target="_blank">
+                                <i class="bi bi-heart-fill"></i> Boosty
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- ГЛАВНЫЙ ЭКРАН (Hero) -->
+    <!-- ГЛАВНЫЙ ЭКРАН -->
     <section class="hero-section text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Анализ смет</h1>
+            <h1 class="display-4 fw-bold mb-3 text-uppercase">Анализ смет</h1>
             <p class="lead mb-4">Профессиональный инструмент для быстрого и точного анализа смет.<br>Поддержка Windows и Linux.</p>
             
             <!-- Кнопки скачивания -->
@@ -83,6 +121,20 @@
                 <a href="#" class="btn btn-outline-light btn-lg px-4 shadow">
                     <i class="bi bi-ubuntu"></i> Скачать для Linux
                 </a>
+            </div>
+
+            <!-- БЛОК СОЦСЕТЕЙ -->
+            <div class="mt-5 pt-3">
+                <p class="text-white-50 small mb-3 text-uppercase fw-bold" style="letter-spacing: 1px;">Присоединяйтесь к нашим каналам</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <!-- ЗАМЕНИ # НА СВОИ ССЫЛКИ -->
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-telegram"></i> Telegram</a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-chat-square-text-fill"></i> ВКонтакте</a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-camera-video-fill"></i> ВК Видео</a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-youtube"></i> YouTube</a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-play-circle-fill"></i> RUTUBE</a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-fire"></i> Дзен</a>
+                </div>
             </div>
         </div>
     </section>
@@ -107,44 +159,55 @@
         </div>
     </section>
 
-    <!-- БЛОК С ОПИСАНИЕМ (Опционально, для заполнения места) -->
+    <!-- БЛОК ПРЕИМУЩЕСТВ -->
     <section class="py-5 bg-white">
         <div class="container text-center">
-            <h2 class="mb-4">Почему «Анализ смет»?</h2>
+            <h2 class="mb-5 fw-bold">Преимущества</h2>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <i class="bi bi-lightning-charge-fill display-4 text-primary"></i>
-                    <h4 class="mt-2">Скорость</h4>
-                    <p class="text-muted">Мгновенная обработка даже самых объемных сметных файлов.</p>
+                <!-- 1. Кроссплатформенность -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="p-3">
+                        <i class="bi bi-pc-display-horizontal display-4 text-primary"></i>
+                        <h5 class="mt-3">Кроссплатформенность</h5>
+                        <p class="text-muted small">Работает на Windows и полностью совместима с любыми российскими дистрибутивами Linux (Astra, Alt, RED OS и др.).</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <i class="bi bi-shield-check display-4 text-success"></i>
-                    <h4 class="mt-2">Точность</h4>
-                    <p class="text-muted">Алгоритмы исключают человеческий фактор и ошибки в расчетах.</p>
+                <!-- 2. Безопасность -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="p-3">
+                        <i class="bi bi-shield-lock-fill display-4 text-success"></i>
+                        <h5 class="mt-3">Безопасность</h5>
+                        <p class="text-muted small">Не требует интернета. Все вычисления происходят локально на вашем ПК — ваши данные под надежной защитой.</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <i class="bi bi-pc-display display-4 text-info"></i>
-                    <h4 class="mt-2">Кроссплатформенность</h4>
-                    <p class="text-muted">Работайте так, как удобно вам: на Windows или Linux.</p>
+                <!-- 3. Скорость и Точность -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="p-3">
+                        <i class="bi bi-lightning-charge-fill display-4 text-warning"></i>
+                        <h5 class="mt-3">Скорость и Точность</h5>
+                        <p class="text-muted small">Мгновенный анализ больших объемов. Алгоритмы исключают человеческий фактор и находят малейшие несоответствия.</p>
+                    </div>
+                </div>
+                <!-- 4. Массовость и Детали -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="p-3">
+                        <i class="bi bi-zoom-in display-4 text-info"></i>
+                        <h5 class="mt-3">Массовость и Детали</h5>
+                        <p class="text-muted small">Обрабатывайте десятки смет пакетно. Программа позволяет заглянуть в любую деталь расчета, не теряя общей картины.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ПОДВАЛ (Footer) -->
+    <!-- ПОДВАЛ -->
     <footer class="footer py-4 text-center">
         <div class="container">
-            <div class="mb-3">
-                <!-- ЗАМЕНИ # НА СВОИ ССЫЛКИ -->
-                <a href="#" title="Telegram"><i class="bi bi-telegram"></i></a>
-                <a href="#" title="ВКонтакте"><i class="bi bi-chat-square-text-fill"></i></a>
-                <a href="#" title="Email"><i class="bi bi-envelope-fill"></i></a>
-            </div>
             <p class="mb-0 small">&copy; 2023-2024 Анализ смет. Все права защищены.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS (нужен для мобильного меню-бургера) -->
+    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
