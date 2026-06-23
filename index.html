@@ -28,62 +28,31 @@
             color: #adb5bd;
         }
         
-        /* Стили для логотипа (капс, размер, разрежение) */
+        /* Стили для логотипа */
         .navbar-brand {
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
-        }
-
-        /* Адаптация меню-шторки для компьютеров (чтобы оно было обычным верхним меню) */
-        @media (min-width: 992px) {
-            .offcanvas-lg {
-                position: static;
-                transform: none !important;
-                visibility: visible !important;
-                background-color: transparent !important;
-                width: auto !important;
-                border: 0 !important;
-            }
-            .offcanvas-lg .offcanvas-body {
-                display: flex;
-                flex-direction: row;
-                padding: 0;
-            }
-            .offcanvas-lg .navbar-nav {
-                flex-direction: row;
-            }
-            .offcanvas-lg .nav-link {
-                color: rgba(255,255,255,.75) !important;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-            .offcanvas-lg .nav-link:hover {
-                color: #ffffff !important;
-            }
-            .offcanvas-lg .btn-warning {
-                margin-left: 1rem;
-            }
         }
     </style>
 </head>
 <body>
 
     <!-- НАВИГАЦИЯ -->
-    <nav class="navbar navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand fw-bold text-uppercase" href="index.html">
                 <i class="bi bi-bar-chart-fill"></i> Анализ смет
             </a>
-            <!-- Кнопка бургера (работает только на мобильных) -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <!-- Кнопка бургера (видна только на мобильных) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- Само меню (на компе видно сразу, на мобильном - шторка справа) -->
-            <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasMenu">
+            <!-- Меню: на мобильном - шторка справа, на компе - обычное горизонтальное меню -->
+            <div class="offcanvas offcanvas-end offcanvas-lg bg-dark" tabindex="-1" id="offcanvasMenu">
                 <div class="offcanvas-header d-lg-none">
-                    <h5 class="offcanvas-title text-uppercase">Меню</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    <h5 class="offcanvas-title text-white text-uppercase">Меню</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMenu"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -93,7 +62,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="videos.html">Видео-инструкции</a>
                         </li>
-                        <li class="nav-item mt-2 mt-lg-0">
+                        <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
                             <!-- ЗАМЕНИ # НА ССЫЛКУ BOOSTY -->
                             <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="#" target="_blank">
                                 <i class="bi bi-heart-fill"></i> Boosty
@@ -128,12 +97,12 @@
                 <p class="text-white-50 small mb-3 text-uppercase fw-bold" style="letter-spacing: 1px;">Присоединяйтесь к нашим каналам</p>
                 <div class="d-flex flex-wrap justify-content-center gap-2">
                     <!-- ЗАМЕНИ # НА СВОИ ССЫЛКИ -->
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-telegram"></i> Telegram</a>
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-chat-square-text-fill"></i> ВКонтакте</a>
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-camera-video-fill"></i> ВК Видео</a>
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-youtube"></i> YouTube</a>
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-play-circle-fill"></i> RUTUBE</a>
-                    <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-fire"></i> Дзен</a>
+                    <a href="#" class="btn btn-outline-light btn-sm">Telegram</a>
+                    <a href="#" class="btn btn-outline-light btn-sm">ВКонтакте</a>
+                    <a href="#" class="btn btn-outline-light btn-sm">ВК Видео</a>
+                    <a href="#" class="btn btn-outline-light btn-sm">YouTube</a>
+                    <a href="#" class="btn btn-outline-light btn-sm">RUTUBE</a>
+                    <a href="#" class="btn btn-outline-light btn-sm">Дзен</a>
                 </div>
             </div>
         </div>
