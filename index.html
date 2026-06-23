@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ смет - Умный анализ смет для Windows и Linux</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        .boosty-card {
+            background-color: #fff;
+            border-left: 5px solid #ff7a00; /* Фирменный оранжевый Boosty */
+        }
+        .footer {
+            background-color: #212529;
+            color: #adb5bd;
+        }
+        .footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        .footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- НАВИГАЦИЯ (Меню) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bar-chart-fill"></i> Анализ смет
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Видео-инструкции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="https://boosty.to/ТВОЯ_ССЫЛКА" target="_blank">
+                            <i class="bi bi-heart-fill"></i> Boosty
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ ЭКРАН (Hero) -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Анализ смет</h1>
+            <p class="lead mb-4">Профессиональный инструмент для быстрого и точного анализа смет.<br>Поддержка Windows и Linux.</p>
+            
+            <!-- Кнопки скачивания -->
+            <div class="d-grid gap-3 d-md-flex justify-content-md-center mt-4">
+                <!-- ЗАМЕНИ # НА ССЫЛКУ GOOGLE ДИСК ДЛЯ WINDOWS -->
+                <a href="#" class="btn btn-light btn-lg px-4 me-md-2 shadow">
+                    <i class="bi bi-windows"></i> Скачать для Windows
+                </a>
+                <!-- ЗАМЕНИ # НА ССЫЛКУ GOOGLE ДИСК ДЛЯ LINUX -->
+                <a href="#" class="btn btn-outline-light btn-lg px-4 shadow">
+                    <i class="bi bi-ubuntu"></i> Скачать для Linux
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК ПРО BOOSTY -->
+    <section class="py-5">
+        <div class="container">
+            <div class="card boosty-card shadow-sm p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="mb-2"><i class="bi bi-gift-fill text-warning"></i> Подписка на приложение</h3>
+                        <p class="mb-0 text-muted">Хотите пользоваться программой на постоянной основе и получать обновления? Подписка на Boosty открывает полный доступ к приложению «Анализ смет» и эксклюзивным материалам!</p>
+                    </div>
+                    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <!-- ЗАМЕНИ # НА ССЫЛКУ BOOSTY -->
+                        <a href="#" class="btn btn-warning btn-lg fw-bold" target="_blank">
+                            Оформить на Boosty
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК С ОПИСАНИЕМ (Опционально, для заполнения места) -->
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Почему «Анализ смет»?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <i class="bi bi-lightning-charge-fill display-4 text-primary"></i>
+                    <h4 class="mt-2">Скорость</h4>
+                    <p class="text-muted">Мгновенная обработка даже самых объемных сметных файлов.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-shield-check display-4 text-success"></i>
+                    <h4 class="mt-2">Точность</h4>
+                    <p class="text-muted">Алгоритмы исключают человеческий фактор и ошибки в расчетах.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-pc-display display-4 text-info"></i>
+                    <h4 class="mt-2">Кроссплатформенность</h4>
+                    <p class="text-muted">Работайте так, как удобно вам: на Windows или Linux.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ (Footer) -->
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <div class="mb-3">
+                <!-- ЗАМЕНИ # НА СВОИ ССЫЛКИ -->
+                <a href="#" title="Telegram"><i class="bi bi-telegram"></i></a>
+                <a href="#" title="ВКонтакте"><i class="bi bi-chat-square-text-fill"></i></a>
+                <a href="#" title="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+            <p class="mb-0 small">&copy; 2023-2024 Анализ смет. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (нужен для мобильного меню-бургера) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
