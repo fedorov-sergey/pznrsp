@@ -1,7 +1,7 @@
 # Анализ смет - Официальный сайт
 
-🌐 **Сайт:** [сайт](https://fedorov-sergey.github.io/pznrsp/)  
-💚 **Boosty:** [Ссылка на Boosty](#)  
+🌐 **Сайт:** <a href="https://fedorov-sergey.github.io/pznrsp/" target="_blank" rel="noopener noreferrer">открыть сайт</a>  
+💚 **Boosty:** <a href="#" target="_blank" rel="noopener noreferrer">поддержать на Boosty</a>  
 📱 **Приложение:** Анализ смет для Windows и Linux
 
 ---
@@ -9,11 +9,3 @@
 ## 📋 Описание
 
 Официальный сайт приложения **"Анализ смет"** — профессионального инструмента для быстрого и точного анализа сметной документации.
-
-Сайт создан на **GitHub Pages** с использованием **Bootstrap 5** для адаптивной верстки.
-
----
-
-## 🚀 Быстрый старт
-
-## 📁 Структура проекта
