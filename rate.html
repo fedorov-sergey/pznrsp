@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифы - Анализ смет</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .page-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 60px 0 40px;
+        }
+        .footer {
+            background-color: #212529;
+            color: #adb5bd;
+        }
+        .navbar-brand {
+            font-size: 1.3rem !important;
+            letter-spacing: 1.5px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+        }
+        .step-item:not(:last-child) {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .step-text {
+            flex: 1;
+        }
+        .step-text h5 {
+            margin-bottom: 4px;
+        }
+
+        .btn-vk {
+            background-color: #4C75A3;
+            border-color: #4C75A3;
+            color: white;
+        }
+        .btn-vk:hover {
+            background-color: #3d5f85;
+            border-color: #3d5f85;
+            color: white;
+        }
+        .btn-telegram {
+            background-color: #2AABEE;
+            border-color: #2AABEE;
+            color: white;
+        }
+        .btn-telegram:hover {
+            background-color: #229ed9;
+            border-color: #229ed9;
+            color: white;
+        }
+        .btn-max {
+            background-color: #E41E3F;
+            border-color: #E41E3F;
+            color: white;
+        }
+        .btn-max:hover {
+            background-color: #c21b38;
+            border-color: #c21b38;
+            color: white;
+        }
+
+        .alert-instruction {
+            background: #fff;
+            border-left: 5px solid #0d6efd;
+        }
+
+        /* Тарифы */
+        .tariff-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .tariff-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .tariff-card.recommended {
+            border-color: #0d6efd;
+            box-shadow: 0 4px 20px rgba(13,110,253,0.2);
+        }
+        .tariff-card.recommended:hover {
+            box-shadow: 0 8px 30px rgba(13,110,253,0.3);
+        }
+        .tariff-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0d6efd;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .tariff-price {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #212529;
+            line-height: 1;
+        }
+        .tariff-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #6c757d;
+        }
+        .tariff-period {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+        .tariff-per-day {
+            font-size: 0.9rem;
+            color: #0d6efd;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .tariff-free .tariff-price {
+            color: #198754;
+        }
+        .tariff-free {
+            border-color: #198754;
+        }
+        .trial-note {
+            background: #e8f5e9;
+            border-radius: 10px;
+            padding: 16px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        /* Калькулятор окупаемости */
+        .calc-block {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 16px;
+            padding: 32px 28px;
+            color: #fff;
+            margin-bottom: 32px;
+        }
+        .calc-block h3 {
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .calc-subtitle {
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 24px;
+        }
+
+        /* Ползунок */
+        .slider-wrap {
+            margin-bottom: 8px;
+        }
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 8px;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #0d6efd 0%, #0d6efd var(--slider-pct, 50%), rgba(255,255,255,0.15) var(--slider-pct, 50%));
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #0d6efd;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #0d6efd;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .salary-display {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 12px 0 24px;
+        }
+        .salary-display small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Карточки результатов */
+        .calc-result {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px 12px;
+            text-align: center;
+        }
+        .calc-result-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #4fc3f7;
+            line-height: 1.1;
+        }
+        .calc-result-value.highlight {
+            color: #66bb6a;
+            font-size: 2rem;
+        }
+        .calc-result-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 4px;
+        }
+        .calc-verdict {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .calc-verdict-text {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .calc-verdict-text strong {
+            color: #66bb6a;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-uppercase" href="index.html">
+                <i class="bi bi-bar-chart-fill"></i> Анализ смет
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end offcanvas-lg bg-dark" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title text-white text-uppercase">Меню</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMenu"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="videos.html">Видео-инструкции</a>
+                        </li>
+                        <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
+                            <a class="btn btn-warning fw-bold w-100 w-lg-auto" href="#" target="_blank">
+                                <i class="bi bi-heart-fill"></i> Boosty
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ЗАГОЛОВОК -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">Тарифы</h1>
+            <p class="lead mb-0">Выбери тариф и начни экономить время</p>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <section class="py-5">
+        <div class="container" style="max-width: 800px;">
+
+            <!-- Пробный период -->
+            <div class="trial-note mb-4">
+                <i class="bi bi-gift-fill text-success"></i>
+                <strong>5 дней бесплатно</strong> — убедитесь, что всё работает, прежде чем покупать
+            </div>
+
+            <!-- Карточки тарифов -->
+            <div class="row g-3 justify-content-center mb-4">
+
+                <!-- 30 дней -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="tariff-card h-100">
+                        <div class="tariff-period">30 дней</div>
+                        <div class="tariff-price">500 <span>руб.</span></div>
+                        <div class="tariff-per-day">~16,67 руб./день</div>
+                    </div>
+                </div>
+
+                <!-- 60 дней -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="tariff-card h-100">
+                        <div class="tariff-period">60 дней</div>
+                        <div class="tariff-price">800 <span>руб.</span></div>
+                        <div class="tariff-per-day">~13,33 руб./день</div>
+                    </div>
+                </div>
+
+                <!-- 90 дней — рекомендуемый -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="tariff-card recommended h-100">
+                        <div class="tariff-badge">Выгодно</div>
+                        <div class="tariff-period">90 дней</div>
+                        <div class="tariff-price">990 <span>руб.</span></div>
+                        <div class="tariff-per-day">11 руб./день</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Калькулятор окупаемости -->
+            <div class="calc-block">
+                <h3 class="text-center fw-bold">Рассчитай свою выгоду</h3>
+                <p class="calc-subtitle text-center">Передвинь ползунок и узнай, за сколько дней окупится тариф</p>
+
+                <div class="slider-wrap">
+                    <div class="slider-labels">
+                        <span>30 000</span>
+                        <span>150 000</span>
+                    </div>
+                    <input type="range" id="salarySlider" min="30000" max="150000" step="5000" value="60000">
+                </div>
+
+                <div class="salary-display">
+                    <small>Ваша зарплата:</small><br>
+                    <span id="salaryValue">60 000</span> <small>руб./мес.</small>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="calc-result">
+                            <div class="calc-result-value" id="dailyRate">3 000</div>
+                            <div class="calc-result-label">руб. в день</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="calc-result">
+                            <div class="calc-result-value highlight" id="payoffTime">0,3 дня</div>
+                            <div class="calc-result-label">окупаемость</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="calc-result">
+                            <div class="calc-result-value" id="freeDays">89,7 дней</div>
+                            <div class="calc-result-label">бесплатно</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-verdict">
+                    <div class="calc-verdict-text">
+                        Программа окупится за <strong id="verdictPayoff">0,3 дня</strong>, а оставшиеся <strong id="verdictFree">89,7 дней</strong> ты работаешь бесплатно
+                    </div>
+                </div>
+            </div>
+
+            <!-- Инструкция -->
+            <div class="card shadow-sm alert-instruction">
+                <div class="card-body p-4">
+                    <h5 class="mb-4"><i class="bi bi-list-ol text-primary"></i> Как оформить подписку</h5>
+
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <div class="step-text">
+                            <h5>Скачайте приложение</h5>
+                            <p class="text-muted mb-0">Перейдите на <a href="index.html">главную страницу</a> и скачайте приложение для вашей операционной системы (Windows или Linux).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <div class="step-text">
+                            <h5>Откройте окно «Лицензия»</h5>
+                            <p class="text-muted mb-0">Запустите приложение и откройте окно «Лицензия» через меню «Справка» в верхней панели.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <div class="step-text">
+                            <h5>Отсканируйте QR-код</h5>
+                            <p class="text-muted mb-0">Отсканируйте QR-код камерой смартфона или нажмите по нему, чтобы перейти на страницу с вашим ID.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item border-0">
+                        <span class="step-number">4</span>
+                        <div class="step-text">
+                            <h5>Скопируйте ID и свяжитесь с разработчиком</h5>
+                            <p class="text-muted mb-0">На открывшейся странице скопируйте ID компьютера и отправьте его разработчику в любом удобном мессенджере.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки соцсетей -->
+            <div class="text-center mt-4">
+                <h5 class="mb-3">Напишите разработчику</h5>
+                <p class="text-muted small mb-3">Выберите удобный мессенджер и отправьте скопированный ID</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="https://t.me/pznrsp" class="btn btn-telegram btn-lg" target="_blank">
+                        <i class="bi bi-telegram"></i> Telegram
+                    </a>
+                    <a href="https://vk.com/pznrsp" class="btn btn-vk btn-lg" target="_blank">
+                        <i class="bi bi-chat-dots-fill"></i> ВКонтакте
+                    </a>
+                    <a href="https://max.buzz/i/pznrsp" class="btn btn-max btn-lg" target="_blank">
+                        <i class="bi bi-chat-fill"></i> Макс
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer py-4 text-center">
+        <div class="container">
+            <p class="mb-2">
+                <a href="index.html" class="text-white-50 text-decoration-none">
+                    <i class="bi bi-arrow-left"></i> На главную
+                </a>
+            </p>
+            <p class="mb-0 small">&copy; 2026 Анализ смет. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Калькулятор окупаемости -->
+    <script>
+        (function() {
+            var slider = document.getElementById('salarySlider');
+            var salaryEl = document.getElementById('salaryValue');
+            var dailyEl = document.getElementById('dailyRate');
+            var payoffEl = document.getElementById('payoffTime');
+            var freeEl = document.getElementById('freeDays');
+            var verdictPayoff = document.getElementById('verdictPayoff');
+            var verdictFree = document.getElementById('verdictFree');
+            var cost = 990;
+            var subscriptionDays = 90;
+
+            function formatNumber(n) {
+                return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+            }
+
+            function formatDecimal(n) {
+                return n.toFixed(1).replace('.', ',');
+            }
+
+            function update() {
+                var salary = parseInt(slider.value);
+
+                // Процент заполнения ползунка
+                var pct = ((salary - 30000) / (150000 - 30000)) * 100;
+                slider.style.setProperty('--slider-pct', pct + '%');
+
+                // Зарплата в день (20 рабочих дней)
+                var daily = salary / 20;
+
+                // Дни окупаемости
+                var payoffDays = cost / daily;
+                var freeDays = subscriptionDays - payoffDays;
+
+                // Формат вывода
+                salaryEl.textContent = formatNumber(salary);
+                dailyEl.textContent = formatNumber(Math.round(daily));
+
+                payoffEl.textContent = formatDecimal(payoffDays) + ' ' + pluralDays(payoffDays);
+                freeEl.textContent = formatDecimal(freeDays) + ' ' + pluralDays(freeDays);
+
+                verdictPayoff.textContent = formatDecimal(payoffDays) + ' ' + pluralDays(payoffDays);
+                verdictFree.textContent = formatDecimal(freeDays) + ' ' + pluralDays(freeDays);
+            }
+
+            function pluralDays(n) {
+                if (n < 1) return 'дня';
+                var d = Math.abs(n) % 100;
+                var n1 = n % 10;
+                if (d > 10 && d < 20) return 'дней';
+                if (n1 === 1) return 'день';
+                if (n1 >= 2 && n1 <= 4) return 'дня';
+                return 'дней';
+            }
+
+            slider.addEventListener('input', update);
+            update();
+        })();
+    </script>
+</body>
+</html>
