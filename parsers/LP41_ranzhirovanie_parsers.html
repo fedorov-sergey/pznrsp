@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,50 +115,50 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Группы</td>
-                                <td>Кнопка "Группы": (сопоставление детально к позициям/ресурсам сметы можно увидеть в парсере "ЛС" - "Расценки" - "ВОР+Группы")<br><br>• <b>Подобраны</b> — была нажата кнопка "Подобрать все группы" (последующие изменения в теле сметы могли не учесться, если "Авто"=□)<br><br>• <b>Удалены</b> — была нажата кнопка "Удалить все группы" или никогда не нажималась кнопка "Подобрать все группы"</td>
+                                <td class="fw-bold col-name">Группы</td>
+                                <td class="col-desc">Кнопка "Группы": (сопоставление детально к позициям/ресурсам сметы можно увидеть в парсере "ЛС" - "Расценки" - "ВОР+Группы")<br><br>• <b>Подобраны</b> — была нажата кнопка "Подобрать все группы" (последующие изменения в теле сметы могли не учесться, если "Авто"=□)<br><br>• <b>Удалены</b> — была нажата кнопка "Удалить все группы" или никогда не нажималась кнопка "Подобрать все группы"</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Файл</td>
-                                <td>Файл для ранжирования (Для смет с другим регионом будут взяты цены из этой зоны, но если регионы совпадают, то будет использована зона, указанная в смете)</td>
+                                <td class="fw-bold col-name">Файл</td>
+                                <td class="col-desc">Файл для ранжирования (Для смет с другим регионом будут взяты цены из этой зоны, но если регионы совпадают, то будет использована зона, указанная в смете)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Авто</td>
-                                <td>Автоматически подгружать группы из файла:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Авто</td>
+                                <td class="col-desc">Автоматически подгружать группы из файла:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЗР</td>
-                                <td>Трудозатраты и их процент:<br><b>▣/□ (значение %)</b></td>
+                                <td class="fw-bold col-name">ТЗР</td>
+                                <td class="col-desc">Трудозатраты и их процент:<br><b>▣/□ (значение %)</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МиМ</td>
-                                <td>Машины и механизмы и их процент:<br><b>▣/□ (значение %)</b></td>
+                                <td class="fw-bold col-name">МиМ</td>
+                                <td class="col-desc">Машины и механизмы и их процент:<br><b>▣/□ (значение %)</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МАТ</td>
-                                <td>Материалы и их процент:<br><b>▣/□ (значение %)</b></td>
+                                <td class="fw-bold col-name">МАТ</td>
+                                <td class="col-desc">Материалы и их процент:<br><b>▣/□ (значение %)</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОБР</td>
-                                <td>Оборудование и их процент:<br><b>▣/□ (значение %)</b></td>
+                                <td class="fw-bold col-name">ОБР</td>
+                                <td class="col-desc">Оборудование и их процент:<br><b>▣/□ (значение %)</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПЕР</td>
-                                <td>Перевозка и их процент:<br><b>▣/□ (значение %)</b></td>
+                                <td class="fw-bold col-name">ПЕР</td>
+                                <td class="col-desc">Перевозка и их процент:<br><b>▣/□ (значение %)</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПОГР</td>
-                                <td>Погрузка/разгрузка и их процент:<br><b>▣/□ (значение %)</b></td>
+                                <td class="fw-bold col-name">ПОГР</td>
+                                <td class="col-desc">Погрузка/разгрузка и их процент:<br><b>▣/□ (значение %)</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Коррел</td>
-                                <td>К корреляции: (Алгоритм выделения ресурсов представителей)</td>
+                                <td class="fw-bold col-name">Коррел</td>
+                                <td class="col-desc">К корреляции: (Алгоритм выделения ресурсов представителей)</td>
                             </tr>
                         </tbody>
                     </table>

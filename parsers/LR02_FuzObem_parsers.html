@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,86 +115,86 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУ</td>
-                                <td>Не учитывать:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">НУ</td>
+                                <td class="col-desc">Не учитывать:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">АР</td>
-                                <td>Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
+                                <td class="fw-bold col-name">АР</td>
+                                <td class="col-desc">Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">SysID</td>
-                                <td>SysID (внутренний идентификатор позиции)</td>
+                                <td class="fw-bold col-name">SysID</td>
+                                <td class="col-desc">SysID (внутренний идентификатор позиции)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">№</td>
-                                <td>№ п.п</td>
+                                <td class="fw-bold col-name">№</td>
+                                <td class="col-desc">№ п.п</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЕИ</td>
-                                <td>Ед. изм.</td>
+                                <td class="fw-bold col-name">ЕИ</td>
+                                <td class="col-desc">Ед. изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КолВо</td>
-                                <td>Количество/Всего</td>
+                                <td class="fw-bold col-name">КолВо</td>
+                                <td class="col-desc">Количество/Всего</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечания</td>
-                                <td>Примечания (синий текст)</td>
+                                <td class="fw-bold col-name">Примечания</td>
+                                <td class="col-desc">Примечания (синий текст)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ФизОб</td>
-                                <td>Физобъем (формула для расчета или число)</td>
+                                <td class="fw-bold col-name">ФизОб</td>
+                                <td class="col-desc">Физобъем (формула для расчета или число)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЧистФизОб</td>
-                                <td>Физобъем без учета кратности и округления</td>
+                                <td class="fw-bold col-name">ЧистФизОб</td>
+                                <td class="col-desc">Физобъем без учета кратности и округления</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КратИзм</td>
-                                <td>К-т кратности измерителя</td>
+                                <td class="fw-bold col-name">КратИзм</td>
+                                <td class="col-desc">К-т кратности измерителя</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КратОб</td>
-                                <td>К-т кратности физобъема</td>
+                                <td class="fw-bold col-name">КратОб</td>
+                                <td class="col-desc">К-т кратности физобъема</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Идент</td>
-                                <td>Идентификатор</td>
+                                <td class="fw-bold col-name">Идент</td>
+                                <td class="col-desc">Идентификатор</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Резул</td>
-                                <td>Физобъем (результат)</td>
+                                <td class="fw-bold col-name">Резул</td>
+                                <td class="col-desc">Физобъем (результат)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Точн</td>
-                                <td>Точность расчета:<br>• <b>7</b> - 7 знаков после запятой<br>• <b>6</b> - 6 знаков после запятой<br>• <b>5</b> - 5 знаков после запятой<br>• <b>4</b> - 4 знака после запятой<br>• <b>3</b> - 3 знака после запятой<br>• <b>2</b> - 2 знака после запятой<br>• <b>1</b> - 1 знак после запятой<br>• <b>0</b> - целое число<br>• <b>-1</b> - округление до 10<br>• <b>-2</b> - округление до 100<br>• <b>-3</b> - округление до 1000</td>
+                                <td class="fw-bold col-name">Точн</td>
+                                <td class="col-desc">Точность расчета:<br>• <b>7</b> - 7 знаков после запятой<br>• <b>6</b> - 6 знаков после запятой<br>• <b>5</b> - 5 знаков после запятой<br>• <b>4</b> - 4 знака после запятой<br>• <b>3</b> - 3 знака после запятой<br>• <b>2</b> - 2 знака после запятой<br>• <b>1</b> - 1 знак после запятой<br>• <b>0</b> - целое число<br>• <b>-1</b> - округление до 10<br>• <b>-2</b> - округление до 100<br>• <b>-3</b> - округление до 1000</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Способ</td>
-                                <td>Способ округления:<br>• <b>Вверх</b><br>• <b>Вниз</b><br>• <b>Стандартный</b></td>
+                                <td class="fw-bold col-name">Способ</td>
+                                <td class="col-desc">Способ округления:<br>• <b>Вверх</b><br>• <b>Вниз</b><br>• <b>Стандартный</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НомВед</td>
-                                <td>Номера позиций ведомости объемов работ</td>
+                                <td class="fw-bold col-name">НомВед</td>
+                                <td class="col-desc">Номера позиций ведомости объемов работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СсылкаВед</td>
-                                <td>Ссылка на файл ведомости объемов работ</td>
+                                <td class="fw-bold col-name">СсылкаВед</td>
+                                <td class="col-desc">Ссылка на файл ведомости объемов работ</td>
                             </tr>
                         </tbody>
                     </table>

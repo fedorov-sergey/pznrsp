@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,42 +115,42 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Тип</td>
-                                <td>Вид сметы:<br>• <b>ЛС</b> — Локальная смета<br>• <b>ОС</b> — Объектная смета<br>• <b>ССР</b> — Сводный сметный расчет<br>• <b>ЦЕН</b> — Ценник<br>• <b>РВ</b> — Ресурсная ведомость<br>• <b>ИНД</b> — Индексы<br>• <b>СК</b> — Смета контракта<br>• <b>ВОР</b> — Ведомость объёмов работ<br>• <b>КА</b> — Конъюнктурный анализ<br>• <b>ТК</b> — Транспортная калькуляция<br>• <b>СЗ</b> — Сводка затрат<br>• <b>ПИР</b> — Проектная смета<br>• <b>СР</b> — Сборник расценок</td>
+                                <td class="fw-bold col-name">Тип</td>
+                                <td class="col-desc">Вид сметы:<br>• <b>ЛС</b> — Локальная смета<br>• <b>ОС</b> — Объектная смета<br>• <b>ССР</b> — Сводный сметный расчет<br>• <b>ЦЕН</b> — Ценник<br>• <b>РВ</b> — Ресурсная ведомость<br>• <b>ИНД</b> — Индексы<br>• <b>СК</b> — Смета контракта<br>• <b>ВОР</b> — Ведомость объёмов работ<br>• <b>КА</b> — Конъюнктурный анализ<br>• <b>ТК</b> — Транспортная калькуляция<br>• <b>СЗ</b> — Сводка затрат<br>• <b>ПИР</b> — Проектная смета<br>• <b>СР</b> — Сборник расценок</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ДатаИзм</td>
-                                <td>Дата последнего изменения файла:</td>
+                                <td class="fw-bold col-name">ДатаИзм</td>
+                                <td class="col-desc">Дата последнего изменения файла:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ДатаСозд</td>
-                                <td>Дата создания файла:</td>
+                                <td class="fw-bold col-name">ДатаСозд</td>
+                                <td class="col-desc">Дата создания файла:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЛокНом</td>
-                                <td>Локальный номер (из вкладки "Документ", далее "Параметры" - "Свойства"):</td>
+                                <td class="fw-bold col-name">ЛокНом</td>
+                                <td class="col-desc">Локальный номер (из вкладки "Документ", далее "Параметры" - "Свойства"):</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РегНом</td>
-                                <td>Регистрационный номер (из вкладки "Документ", далее "Параметры" - "Свойства"):</td>
+                                <td class="fw-bold col-name">РегНом</td>
+                                <td class="col-desc">Регистрационный номер (из вкладки "Документ", далее "Параметры" - "Свойства"):</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Цена</td>
-                                <td>ВСЕГО по смете (из вкладки "Документ" - кнопка "Итоги"):</td>
+                                <td class="fw-bold col-name">Цена</td>
+                                <td class="col-desc">ВСЕГО по смете (из вкладки "Документ" - кнопка "Итоги"):</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Метод</td>
-                                <td>Расчет импорта (из вкладки "Документ", далее "Параметры" - "Общие")</td>
+                                <td class="fw-bold col-name">Метод</td>
+                                <td class="col-desc">Расчет импорта (из вкладки "Документ", далее "Параметры" - "Общие")</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Комментарий</td>
-                                <td>Примечанией (из вкладки "Документ", далее "Параметры" - "Свойства"):</td>
+                                <td class="fw-bold col-name">Комментарий</td>
+                                <td class="col-desc">Примечанией (из вкладки "Документ", далее "Параметры" - "Свойства"):</td>
                             </tr>
                         </tbody>
                     </table>

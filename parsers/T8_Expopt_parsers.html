@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,42 +115,42 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтПоз</td>
-                                <td>Сохранять итоги по позициям:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИтПоз</td>
+                                <td class="col-desc">Сохранять итоги по позициям:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтРазд</td>
-                                <td>Сохранять итоги по разделам:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИтРазд</td>
+                                <td class="col-desc">Сохранять итоги по разделам:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтСмет</td>
-                                <td>Сохранять итоги по смете:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИтСмет</td>
+                                <td class="col-desc">Сохранять итоги по смете:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтАкт</td>
-                                <td>Сохранять итоги по актам:<br><b>▣/□</b> или <b>Нет акта</b></td>
+                                <td class="fw-bold col-name">ИтАкт</td>
+                                <td class="col-desc">Сохранять итоги по актам:<br><b>▣/□</b> или <b>Нет акта</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтПозАкт</td>
-                                <td>Сохранять итоги по позициям актов:<br><b>▣/□</b> или <b>Нет акта</b></td>
+                                <td class="fw-bold col-name">ИтПозАкт</td>
+                                <td class="col-desc">Сохранять итоги по позициям актов:<br><b>▣/□</b> или <b>Нет акта</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтБЦ</td>
-                                <td>Итоги в базисном уровне цен:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИтБЦ</td>
+                                <td class="col-desc">Итоги в базисном уровне цен:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтБИМ</td>
-                                <td>Итоги для базисно-индексного метода расчета:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИтБИМ</td>
+                                <td class="col-desc">Итоги для базисно-индексного метода расчета:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИтРМ</td>
-                                <td>Итоги для расчета ресурсным методом:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИтРМ</td>
+                                <td class="col-desc">Итоги для расчета ресурсным методом:<br><b>▣/□</b></td>
                             </tr>
                         </tbody>
                     </table>

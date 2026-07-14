@@ -401,8 +401,8 @@ def build_columns_html(columns: list) -> str:
             tooltip = format_tooltip(item.get("tooltip", ""))
             table_rows += f'''
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">{escape_html(item.get("name", ""))}</td>
-                                <td>{tooltip}</td>
+                                <td class="fw-bold col-name">{escape_html(item.get("name", ""))}</td>
+                                <td class="col-desc">{tooltip}</td>
                             </tr>'''
 
     return f'''
@@ -413,8 +413,8 @@ def build_columns_html(columns: list) -> str:
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>{table_rows}

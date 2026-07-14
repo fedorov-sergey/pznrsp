@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,74 +115,74 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУ</td>
-                                <td>Не учитывать:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">НУ</td>
+                                <td class="col-desc">Не учитывать:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">АР</td>
-                                <td>Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
+                                <td class="fw-bold col-name">АР</td>
+                                <td class="col-desc">Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">SysID</td>
-                                <td>SysID (внутренний идентификатор позиции)</td>
+                                <td class="fw-bold col-name">SysID</td>
+                                <td class="col-desc">SysID (внутренний идентификатор позиции)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">№</td>
-                                <td>№ п.п</td>
+                                <td class="fw-bold col-name">№</td>
+                                <td class="col-desc">№ п.п</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЕИ</td>
-                                <td>Ед. изм.</td>
+                                <td class="fw-bold col-name">ЕИ</td>
+                                <td class="col-desc">Ед. изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КолВо</td>
-                                <td>Количество</td>
+                                <td class="fw-bold col-name">КолВо</td>
+                                <td class="col-desc">Количество</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбоснБЦ</td>
-                                <td>Обоснование базисной цены</td>
+                                <td class="fw-bold col-name">ОбоснБЦ</td>
+                                <td class="col-desc">Обоснование базисной цены</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбоснТЦ</td>
-                                <td>Обоснование текущей цены</td>
+                                <td class="fw-bold col-name">ОбоснТЦ</td>
+                                <td class="col-desc">Обоснование текущей цены</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Брутто</td>
-                                <td>Материал: Масса брутто (кг)</td>
+                                <td class="fw-bold col-name">Брутто</td>
+                                <td class="col-desc">Материал: Масса брутто (кг)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Общая</td>
-                                <td>Материал: Общая масса (т)</td>
+                                <td class="fw-bold col-name">Общая</td>
+                                <td class="col-desc">Материал: Общая масса (т)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Класс</td>
-                                <td>Материал: Класс груза<br> от 1 до 4</td>
+                                <td class="fw-bold col-name">Класс</td>
+                                <td class="col-desc">Материал: Класс груза<br> от 1 до 4</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СрРаз</td>
-                                <td>Трудозатраты машинистов (для расчета ресурсным методом по Методике 2020 с изм.1): Средний разряд работы машинистов</td>
+                                <td class="fw-bold col-name">СрРаз</td>
+                                <td class="col-desc">Трудозатраты машинистов (для расчета ресурсным методом по Методике 2020 с изм.1): Средний разряд работы машинистов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КолЧел</td>
-                                <td>Трудозатраты машинистов (для расчета ресурсным методом по Методике 2020 с изм.1): Количество чел/часов на маш/час механизма</td>
+                                <td class="fw-bold col-name">КолЧел</td>
+                                <td class="col-desc">Трудозатраты машинистов (для расчета ресурсным методом по Методике 2020 с изм.1): Количество чел/часов на маш/час механизма</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Стоим</td>
-                                <td>Трудозатраты машинистов (для расчета ресурсным методом по Методике 2020 с изм.1): Стоимость в текущих ценах (руб.)</td>
+                                <td class="fw-bold col-name">Стоим</td>
+                                <td class="col-desc">Трудозатраты машинистов (для расчета ресурсным методом по Методике 2020 с изм.1): Стоимость в текущих ценах (руб.)</td>
                             </tr>
                         </tbody>
                     </table>

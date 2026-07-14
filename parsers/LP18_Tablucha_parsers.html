@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,102 +115,102 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Группа</td>
-                                <td>Группа видов работ</td>
+                                <td class="fw-bold col-name">Группа</td>
+                                <td class="col-desc">Группа видов работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ГрID</td>
-                                <td>ID группы видов работ</td>
+                                <td class="fw-bold col-name">ГрID</td>
+                                <td class="col-desc">ID группы видов работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование вида работ</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование вида работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НаимID</td>
-                                <td>ID наименования:</td>
+                                <td class="fw-bold col-name">НаимID</td>
+                                <td class="col-desc">ID наименования:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НР%БЦ</td>
-                                <td>Накладные расходы: %: БЦ</td>
+                                <td class="fw-bold col-name">НР%БЦ</td>
+                                <td class="col-desc">Накладные расходы: %: БЦ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НР%ТЦ</td>
-                                <td>Накладные расходы: %: ТЦ</td>
+                                <td class="fw-bold col-name">НР%ТЦ</td>
+                                <td class="col-desc">Накладные расходы: %: ТЦ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НР%Ст</td>
-                                <td>Накладные расходы: %: Статьи для нач.</td>
+                                <td class="fw-bold col-name">НР%Ст</td>
+                                <td class="col-desc">Накладные расходы: %: Статьи для нач.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СП%БЦ</td>
-                                <td>Сметная прибыль: %: БЦ</td>
+                                <td class="fw-bold col-name">СП%БЦ</td>
+                                <td class="col-desc">Сметная прибыль: %: БЦ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СП%ТЦ</td>
-                                <td>Сметная прибыль: %: ТЦ</td>
+                                <td class="fw-bold col-name">СП%ТЦ</td>
+                                <td class="col-desc">Сметная прибыль: %: ТЦ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СП%Ст</td>
-                                <td>Сметная прибыль: %: Статьи для нач.</td>
+                                <td class="fw-bold col-name">СП%Ст</td>
+                                <td class="col-desc">Сметная прибыль: %: Статьи для нач.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ГрОС</td>
-                                <td>Графа ОС:<br>• <b>С</b> — Строительные работы<br>• <b>М</b> — Монтажные работы<br>• <b>Г</b> — Горные работы<br>• <b>О</b> — Оборудование<br>• <b>П</b> — Прочие затраты</td>
+                                <td class="fw-bold col-name">ГрОС</td>
+                                <td class="col-desc">Графа ОС:<br>• <b>С</b> — Строительные работы<br>• <b>М</b> — Монтажные работы<br>• <b>Г</b> — Горные работы<br>• <b>О</b> — Оборудование<br>• <b>П</b> — Прочие затраты</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ГрРес</td>
-                                <td>Графа ресурса:<br>• <b>(пусто)</b> — По умолчанию<br>• <b>Прв</b> — Перевозка<br>• <b>Пгр</b> — Погрузка</td>
+                                <td class="fw-bold col-name">ГрРес</td>
+                                <td class="col-desc">Графа ресурса:<br>• <b>(пусто)</b> — По умолчанию<br>• <b>Прв</b> — Перевозка<br>• <b>Пгр</b> — Погрузка</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбоснНР</td>
-                                <td>Обоснование: НР</td>
+                                <td class="fw-bold col-name">ОбоснНР</td>
+                                <td class="col-desc">Обоснование: НР</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбоснСП</td>
-                                <td>Обоснование: СП</td>
+                                <td class="fw-bold col-name">ОбоснСП</td>
+                                <td class="col-desc">Обоснование: СП</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">пНРБаз</td>
-                                <td>Поправочные к-ты к накладным расходам: Баз.</td>
+                                <td class="fw-bold col-name">пНРБаз</td>
+                                <td class="col-desc">Поправочные к-ты к накладным расходам: Баз.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">пНРБИ</td>
-                                <td>Поправочные к-ты к накладным расходам: Баз.инд.</td>
+                                <td class="fw-bold col-name">пНРБИ</td>
+                                <td class="col-desc">Поправочные к-ты к накладным расходам: Баз.инд.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">пНРРес</td>
-                                <td>Поправочные к-ты к накладным расходам: Рес.</td>
+                                <td class="fw-bold col-name">пНРРес</td>
+                                <td class="col-desc">Поправочные к-ты к накладным расходам: Рес.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">пСПБаз</td>
-                                <td>Поправочные к-ты к сметной прибыли: Баз.</td>
+                                <td class="fw-bold col-name">пСПБаз</td>
+                                <td class="col-desc">Поправочные к-ты к сметной прибыли: Баз.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">пСПБИ</td>
-                                <td>Поправочные к-ты к сметной прибыли: Баз.инд.</td>
+                                <td class="fw-bold col-name">пСПБИ</td>
+                                <td class="col-desc">Поправочные к-ты к сметной прибыли: Баз.инд.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">пСПРес</td>
-                                <td>Поправочные к-ты к сметной прибыли: Рес.</td>
+                                <td class="fw-bold col-name">пСПРес</td>
+                                <td class="col-desc">Поправочные к-ты к сметной прибыли: Рес.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбКНР</td>
-                                <td>Обоснование к-тов: НР</td>
+                                <td class="fw-bold col-name">ОбКНР</td>
+                                <td class="col-desc">Обоснование к-тов: НР</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбКСП</td>
-                                <td>Обоснование к-тов: СП</td>
+                                <td class="fw-bold col-name">ОбКСП</td>
+                                <td class="col-desc">Обоснование к-тов: СП</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Категория</td>
-                                <td>Категория:<br>• <b>(пусто)</b> — Не назначено<br>• <b>Строительные работы</b> — Construction<br>• <b>Ремонтно-реставрационные работы</b> — Restoration<br>• <b>Транспортные расходы (перевозка), относимые на стоимость строительных работ</b> — ConstrTransportation<br>• <b>Перевозка</b> — Transportation<br>• <b>Перевозка (Автомобили бортовые)</b> — TranspTrucks<br>• <b>Перевозка (Автомобили-самосвалы)</b> — TranspDumpTrucks<br>• <b>Дополнительная перевозка, относимая на стоимость строительных работ</b> — ConstrAddTransportation<br>• <b>Дополнительная перевозка (Автомобили бортовые)</b> — AddTranspTrucks<br>• <b>Дополнительная перевозка (Автомобили-самосвалы)</b> — AddTranspDumpTrucks<br>• <b>Дополнительная перевозка (Автомобили-панелевозы)</b> — AddTranspPanels<br>• <b>Дополнительная перевозка (Автомобили-трубоплетевозы)</b> — AddTranspPipes<br>• <b>Дополнительная перевозка (Автобетоносмесители)</b> — AddTranspConcrete<br>• <b>Отдельные виды работ и затрат, относимые на стоимость строительных работ</b> — ConstrRelated<br>• <b>Монтажные работы</b> — Mounting<br>• <b>Транспортные расходы (перевозка), относимые на стоимость монтажных работ</b> — MountingTransportation<br>• <b>Дополнительная перевозка, относимая на стоимость монтажных работ</b> — MountingAddTransportation<br>• <b>Отдельные виды работ и затрат, относимые на стоимость монтажных работ</b> — MountingRelated<br>• <b>Оборудование</b> — Equipment<br>• <b>Инженерное оборудование</b> — EqEngineering<br>• <b>Технологическое оборудование</b> — EqTech<br>• <b>Лабораторное оборудование</b> — EqLaboratory<br>• <b>Транспортные средства</b> — EqVehicles<br>• <b>Инструмент для технологических процессов</b> — EqTools<br>• <b>Производственный и хозяйственный инвентарь, в том числе мебель</b> — EqInventory<br>• <b>Дополнительная перевозка, относимая на стоимость оборудования</b> — EqAddTransportation<br>• <b>Прочие затраты</b> — Other<br>• <b>Пусконаладочные работы</b> — Commissioning<br>• <b>Транспортные расходы (перевозка), относимая на стоимость прочих работ</b> — OtherTransportation<br>• <b>Дополнительная перевозка, относимая на стоимость прочих работ</b> — OtherAddTransportation<br>• <b>Отдельные виды работ и затрат, относимые на стоимость прочих работ</b> — OtherRelated<br>• <b>Работы по созданию произведений изобразительного искусства монументального характера</b> — OtherFineArt<br>• <b>Горные работы</b> — Mining<br>• <b>Дополнительная перевозка, относимая на стоимость горных работ</b> — MiningAddTransportation</td>
+                                <td class="fw-bold col-name">Категория</td>
+                                <td class="col-desc">Категория:<br>• <b>(пусто)</b> — Не назначено<br>• <b>Строительные работы</b> — Construction<br>• <b>Ремонтно-реставрационные работы</b> — Restoration<br>• <b>Транспортные расходы (перевозка), относимые на стоимость строительных работ</b> — ConstrTransportation<br>• <b>Перевозка</b> — Transportation<br>• <b>Перевозка (Автомобили бортовые)</b> — TranspTrucks<br>• <b>Перевозка (Автомобили-самосвалы)</b> — TranspDumpTrucks<br>• <b>Дополнительная перевозка, относимая на стоимость строительных работ</b> — ConstrAddTransportation<br>• <b>Дополнительная перевозка (Автомобили бортовые)</b> — AddTranspTrucks<br>• <b>Дополнительная перевозка (Автомобили-самосвалы)</b> — AddTranspDumpTrucks<br>• <b>Дополнительная перевозка (Автомобили-панелевозы)</b> — AddTranspPanels<br>• <b>Дополнительная перевозка (Автомобили-трубоплетевозы)</b> — AddTranspPipes<br>• <b>Дополнительная перевозка (Автобетоносмесители)</b> — AddTranspConcrete<br>• <b>Отдельные виды работ и затрат, относимые на стоимость строительных работ</b> — ConstrRelated<br>• <b>Монтажные работы</b> — Mounting<br>• <b>Транспортные расходы (перевозка), относимые на стоимость монтажных работ</b> — MountingTransportation<br>• <b>Дополнительная перевозка, относимая на стоимость монтажных работ</b> — MountingAddTransportation<br>• <b>Отдельные виды работ и затрат, относимые на стоимость монтажных работ</b> — MountingRelated<br>• <b>Оборудование</b> — Equipment<br>• <b>Инженерное оборудование</b> — EqEngineering<br>• <b>Технологическое оборудование</b> — EqTech<br>• <b>Лабораторное оборудование</b> — EqLaboratory<br>• <b>Транспортные средства</b> — EqVehicles<br>• <b>Инструмент для технологических процессов</b> — EqTools<br>• <b>Производственный и хозяйственный инвентарь, в том числе мебель</b> — EqInventory<br>• <b>Дополнительная перевозка, относимая на стоимость оборудования</b> — EqAddTransportation<br>• <b>Прочие затраты</b> — Other<br>• <b>Пусконаладочные работы</b> — Commissioning<br>• <b>Транспортные расходы (перевозка), относимая на стоимость прочих работ</b> — OtherTransportation<br>• <b>Дополнительная перевозка, относимая на стоимость прочих работ</b> — OtherAddTransportation<br>• <b>Отдельные виды работ и затрат, относимые на стоимость прочих работ</b> — OtherRelated<br>• <b>Работы по созданию произведений изобразительного искусства монументального характера</b> — OtherFineArt<br>• <b>Горные работы</b> — Mining<br>• <b>Дополнительная перевозка, относимая на стоимость горных работ</b> — MiningAddTransportation</td>
                             </tr>
                         </tbody>
                     </table>

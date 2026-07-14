@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,74 +115,74 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Способ</td>
-                                <td>Способ расчета зимнего удорожания:<br>• <b>Не использовать</b><br>• <b>Коэффициент по статьям затрат</b><br>• <b>Коэффициент к СМР</b></td>
+                                <td class="fw-bold col-name">Способ</td>
+                                <td class="col-desc">Способ расчета зимнего удорожания:<br>• <b>Не использовать</b><br>• <b>Коэффициент по статьям затрат</b><br>• <b>Коэффициент к СМР</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Зона</td>
-                                <td>Температурная зона (ГСН)</td>
+                                <td class="fw-bold col-name">Зона</td>
+                                <td class="col-desc">Температурная зона (ГСН)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ВидСтр</td>
-                                <td>Вид строительства (ТСН):<br>• <b>Новое строительство</b><br>• <b>Ремонтно-строительные работы</b></td>
+                                <td class="fw-bold col-name">ВидСтр</td>
+                                <td class="col-desc">Вид строительства (ТСН):<br>• <b>Новое строительство</b><br>• <b>Ремонтно-строительные работы</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Норматив</td>
-                                <td>Способ задания норматива:<br>• <b>Таблицы</b><br>• <b>Укрупненный</b></td>
+                                <td class="fw-bold col-name">Норматив</td>
+                                <td class="col-desc">Способ задания норматива:<br>• <b>Таблицы</b><br>• <b>Укрупненный</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование норматива</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование норматива</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОЗП</td>
-                                <td>Коэффициент к основной заработной плате</td>
+                                <td class="fw-bold col-name">ОЗП</td>
+                                <td class="col-desc">Коэффициент к основной заработной плате</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЭМ</td>
-                                <td>Коэффициент к эксплуатации машин</td>
+                                <td class="fw-bold col-name">ЭМ</td>
+                                <td class="col-desc">Коэффициент к эксплуатации машин</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗПМ</td>
-                                <td>Коэффициент к заработной плате механизаторов</td>
+                                <td class="fw-bold col-name">ЗПМ</td>
+                                <td class="col-desc">Коэффициент к заработной плате механизаторов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МАТ</td>
-                                <td>Коэффициент к материалам</td>
+                                <td class="fw-bold col-name">МАТ</td>
+                                <td class="col-desc">Коэффициент к материалам</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СМР</td>
-                                <td>Коэффициент к строительно-монтажным работам</td>
+                                <td class="fw-bold col-name">СМР</td>
+                                <td class="col-desc">Коэффициент к строительно-монтажным работам</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СоотИнд</td>
-                                <td>Использовать норматив ЗУ в соответствии с индексом:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">СоотИнд</td>
+                                <td class="col-desc">Использовать норматив ЗУ в соответствии с индексом:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">К%</td>
-                                <td>Показывать К-т в виде %:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">К%</td>
+                                <td class="col-desc">Показывать К-т в виде %:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">кМАТ</td>
-                                <td>Распространять К-т к МАТ на нормы расхода материалов:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">кМАТ</td>
+                                <td class="col-desc">Распространять К-т к МАТ на нормы расхода материалов:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">кЭМ</td>
-                                <td>Распространять К-т к ЭМ на нормы расхода:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">кЭМ</td>
+                                <td class="col-desc">Распространять К-т к ЭМ на нормы расхода:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">кОЗП</td>
-                                <td>Распространять К-т к ОЗП на трудозатраты:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">кОЗП</td>
+                                <td class="col-desc">Распространять К-т к ОЗП на трудозатраты:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">кЗПМ</td>
-                                <td>Распространять К-т к ЗПМ на трудозатраты механизаторов:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">кЗПМ</td>
+                                <td class="col-desc">Распространять К-т к ЗПМ на трудозатраты механизаторов:<br><b>▣/□</b></td>
                             </tr>
                         </tbody>
                     </table>

@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,90 +116,90 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Код</td>
-                                <td>Код элемента</td>
+                                <td class="fw-bold col-name">Код</td>
+                                <td class="col-desc">Код элемента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование элемента</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование элемента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЕИ</td>
-                                <td>Ед.изм.</td>
+                                <td class="fw-bold col-name">ЕИ</td>
+                                <td class="col-desc">Ед.изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Брутто</td>
-                                <td>Брутто, кг</td>
+                                <td class="fw-bold col-name">Брутто</td>
+                                <td class="col-desc">Брутто, кг</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Класс</td>
-                                <td>Класс груза</td>
+                                <td class="fw-bold col-name">Класс</td>
+                                <td class="col-desc">Класс груза</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Разряд</td>
-                                <td>Разряд работы</td>
+                                <td class="fw-bold col-name">Разряд</td>
+                                <td class="col-desc">Разряд работы</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЦ сметная</td>
-                                <td>Стоимость в текущих ценах Сметная</td>
+                                <td class="fw-bold col-name">ТЦ сметная</td>
+                                <td class="col-desc">Стоимость в текущих ценах Сметная</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЦ оптовая</td>
-                                <td>Стоимость в текущих ценах Оптовая</td>
+                                <td class="fw-bold col-name">ТЦ оптовая</td>
+                                <td class="col-desc">Стоимость в текущих ценах Оптовая</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">БЦ сметная</td>
-                                <td>Стоимость в базисных ценах Сметная</td>
+                                <td class="fw-bold col-name">БЦ сметная</td>
+                                <td class="col-desc">Стоимость в базисных ценах Сметная</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">БЦ оптовая</td>
-                                <td>Стоимость в базисных ценах Оптовая</td>
+                                <td class="fw-bold col-name">БЦ оптовая</td>
+                                <td class="col-desc">Стоимость в базисных ценах Оптовая</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбоснБЦ</td>
-                                <td>Обосн. баз.цены</td>
+                                <td class="fw-bold col-name">ОбоснБЦ</td>
+                                <td class="col-desc">Обосн. баз.цены</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОбоснТЦ</td>
-                                <td>Обосн. тек.цены</td>
+                                <td class="fw-bold col-name">ОбоснТЦ</td>
+                                <td class="col-desc">Обосн. тек.цены</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечания</td>
-                                <td>Примечания</td>
+                                <td class="fw-bold col-name">Примечания</td>
+                                <td class="col-desc">Примечания</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Гиперссылка</td>
-                                <td>Гиперссылка</td>
+                                <td class="fw-bold col-name">Гиперссылка</td>
+                                <td class="col-desc">Гиперссылка</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Раздел</td>
-                                <td>Наименование раздела</td>
+                                <td class="fw-bold col-name">Раздел</td>
+                                <td class="col-desc">Наименование раздела</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РазделП</td>
-                                <td>Примечание раздела</td>
+                                <td class="fw-bold col-name">РазделП</td>
+                                <td class="col-desc">Примечание раздела</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РазделГ</td>
-                                <td>Гиперссылка раздела</td>
+                                <td class="fw-bold col-name">РазделГ</td>
+                                <td class="col-desc">Гиперссылка раздела</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Группа</td>
-                                <td>Группы: Затраты труда рабочих, Затраты труда машинистов, Материалы, Машины и механизмы</td>
+                                <td class="fw-bold col-name">Группа</td>
+                                <td class="col-desc">Группы: Затраты труда рабочих, Затраты труда машинистов, Материалы, Машины и механизмы</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЗМ КолВо</td>
-                                <td>Трудозатраты машинистов Кол-во, чел.-ч.</td>
+                                <td class="fw-bold col-name">ТЗМ КолВо</td>
+                                <td class="col-desc">Трудозатраты машинистов Кол-во, чел.-ч.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЗМ цена</td>
-                                <td>Трудозатраты машинистов Сметная цена, руб.</td>
+                                <td class="fw-bold col-name">ТЗМ цена</td>
+                                <td class="col-desc">Трудозатраты машинистов Сметная цена, руб.</td>
                             </tr>
                         </tbody>
                     </table>

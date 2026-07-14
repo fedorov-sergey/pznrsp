@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,46 +115,46 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Методика</td>
-                                <td>Методика 2020</td>
+                                <td class="fw-bold col-name">Методика</td>
+                                <td class="col-desc">Методика 2020</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Тип</td>
-                                <td>Используемый изм.</td>
+                                <td class="fw-bold col-name">Тип</td>
+                                <td class="col-desc">Используемый изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РазОткл</td>
-                                <td>Разрешить отклонения от стандартных параметров</td>
+                                <td class="fw-bold col-name">РазОткл</td>
+                                <td class="col-desc">Разрешить отклонения от стандартных параметров</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОкрДоРуб</td>
-                                <td>Округление до рублей расчетов в текущих ценах</td>
+                                <td class="fw-bold col-name">ОкрДоРуб</td>
+                                <td class="col-desc">Округление до рублей расчетов в текущих ценах</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НачК</td>
-                                <td>Начислять коэффициент к ЗПМ при отсутствии коэффициента к ЭМ</td>
+                                <td class="fw-bold col-name">НачК</td>
+                                <td class="col-desc">Начислять коэффициент к ЗПМ при отсутствии коэффициента к ЭМ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РасчВсп</td>
-                                <td>Рассчислять вспомогательные ненормируемые материалы</td>
+                                <td class="fw-bold col-name">РасчВсп</td>
+                                <td class="col-desc">Рассчислять вспомогательные ненормируемые материалы</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">УчК</td>
-                                <td>Учитывать коэффициенты при расчете вспомогательных ненормируемых материалов</td>
+                                <td class="fw-bold col-name">УчК</td>
+                                <td class="col-desc">Учитывать коэффициенты при расчете вспомогательных ненормируемых материалов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ГосЭт</td>
-                                <td>Расчет по ГОСЭТАЛОН 2012.Эксплуатация (г.Санкт-Петербург, 2024г.)</td>
+                                <td class="fw-bold col-name">ГосЭт</td>
+                                <td class="col-desc">Расчет по ГОСЭТАЛОН 2012.Эксплуатация (г.Санкт-Петербург, 2024г.)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Округл</td>
-                                <td>Округление индексов к позициям</td>
+                                <td class="fw-bold col-name">Округл</td>
+                                <td class="col-desc">Округление индексов к позициям</td>
                             </tr>
                         </tbody>
                     </table>

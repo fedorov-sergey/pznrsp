@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,86 +115,86 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Вид</td>
-                                <td>DocType (Вид сметы)<br>• <b>sdtSmeta</b> — Локальная смета<br>• <b>sdtObjSmeta</b> — Объектная смета<br>• <b>sdtConsCalc</b> — Сводный сметный расчет<br>• <b>sdtProjectSmeta</b> — Проектная смета<br>• <b>sdtContractSmeta</b> — Смета контракта<br>• <b>sdtDocSummary</b> — Сводка затрат<br>• <b>sdtIndexes</b> — Сборник индексов<br>• <b>sdtUserNBDoc</b> — Сборник расценок<br>• <b>sdtCennik</b> — Ценник<br>• <b>sdtResSummary</b> — Ресурсная ведомость<br>• <b>sdtMarketAnalysis</b> — Конъюктурный анализ<br>• <b>sdtTranspCalc</b> — Транспортная калькуляция<br>• <b>sdtWorksVolumes</b> — Ведомость объемов работ</td>
+                                <td class="fw-bold col-name">Вид</td>
+                                <td class="col-desc">DocType (Вид сметы)<br>• <b>sdtSmeta</b> — Локальная смета<br>• <b>sdtObjSmeta</b> — Объектная смета<br>• <b>sdtConsCalc</b> — Сводный сметный расчет<br>• <b>sdtProjectSmeta</b> — Проектная смета<br>• <b>sdtContractSmeta</b> — Смета контракта<br>• <b>sdtDocSummary</b> — Сводка затрат<br>• <b>sdtIndexes</b> — Сборник индексов<br>• <b>sdtUserNBDoc</b> — Сборник расценок<br>• <b>sdtCennik</b> — Ценник<br>• <b>sdtResSummary</b> — Ресурсная ведомость<br>• <b>sdtMarketAnalysis</b> — Конъюктурный анализ<br>• <b>sdtTranspCalc</b> — Транспортная калькуляция<br>• <b>sdtWorksVolumes</b> — Ведомость объемов работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Ревизия</td>
-                                <td>Revision (Номер сохранения)</td>
+                                <td class="fw-bold col-name">Ревизия</td>
+                                <td class="col-desc">Revision (Номер сохранения)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Дата</td>
-                                <td>ModifyDate (Дата и время изменения)</td>
+                                <td class="fw-bold col-name">Дата</td>
+                                <td class="col-desc">ModifyDate (Дата и время изменения)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Подпись</td>
-                                <td>SignType (Тип подписи)</td>
+                                <td class="fw-bold col-name">Подпись</td>
+                                <td class="col-desc">SignType (Тип подписи)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Шифрование</td>
-                                <td>Crypted (Шифрование)</td>
+                                <td class="fw-bold col-name">Шифрование</td>
+                                <td class="col-desc">Crypted (Шифрование)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Опции</td>
-                                <td>DisabledOptions (Выключенные опции)</td>
+                                <td class="fw-bold col-name">Опции</td>
+                                <td class="col-desc">DisabledOptions (Выключенные опции)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Версия</td>
-                                <td>GSmetaVersion (Версия используемой ГРАНД-Сметы при сохранении)</td>
+                                <td class="fw-bold col-name">Версия</td>
+                                <td class="col-desc">GSmetaVersion (Версия используемой ГРАНД-Сметы при сохранении)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЛН</td>
-                                <td>Attribs.LocNum (Локальный номер)</td>
+                                <td class="fw-bold col-name">ЛН</td>
+                                <td class="col-desc">Attribs.LocNum (Локальный номер)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РН</td>
-                                <td>Attribs.RegNum (Регистрационный номер)</td>
+                                <td class="fw-bold col-name">РН</td>
+                                <td class="col-desc">Attribs.RegNum (Регистрационный номер)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Работа</td>
-                                <td>Attribs.Description (Наименование работ и затрат)</td>
+                                <td class="fw-bold col-name">Работа</td>
+                                <td class="col-desc">Attribs.Description (Наименование работ и затрат)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Стройка</td>
-                                <td>Attribs.ConName (Наименование стройки)</td>
+                                <td class="fw-bold col-name">Стройка</td>
+                                <td class="col-desc">Attribs.ConName (Наименование стройки)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Этап</td>
-                                <td>Attribs.StgName (Наименование этапа (очередь, пусковой комплекс))</td>
+                                <td class="fw-bold col-name">Этап</td>
+                                <td class="col-desc">Attribs.StgName (Наименование этапа (очередь, пусковой комплекс))</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Объект</td>
-                                <td>Attribs.ObjName (Наименование объекта)</td>
+                                <td class="fw-bold col-name">Объект</td>
+                                <td class="col-desc">Attribs.ObjName (Наименование объекта)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечание</td>
-                                <td>Attribs.Comment (Примечание)</td>
+                                <td class="fw-bold col-name">Примечание</td>
+                                <td class="col-desc">Attribs.Comment (Примечание)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Регион</td>
-                                <td>RegionInfo.RegionName (Регион)</td>
+                                <td class="fw-bold col-name">Регион</td>
+                                <td class="col-desc">RegionInfo.RegionName (Регион)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Зона 2001</td>
-                                <td>RegionInfo.ZoneName (Зона для расценок 2001г.)</td>
+                                <td class="fw-bold col-name">Зона 2001</td>
+                                <td class="col-desc">RegionInfo.ZoneName (Зона для расценок 2001г.)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Метод</td>
-                                <td>TotalCalcMethod (Метод ЛС)</td>
+                                <td class="fw-bold col-name">Метод</td>
+                                <td class="col-desc">TotalCalcMethod (Метод ЛС)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ВСЕГО</td>
-                                <td>Total (ВСЕГО по смете)</td>
+                                <td class="fw-bold col-name">ВСЕГО</td>
+                                <td class="col-desc">Total (ВСЕГО по смете)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Прочие</td>
-                                <td>Прочие строки (нераспознанные переменные из Properties.txt)</td>
+                                <td class="fw-bold col-name">Прочие</td>
+                                <td class="col-desc">Прочие строки (нераспознанные переменные из Properties.txt)</td>
                             </tr>
                         </tbody>
                     </table>

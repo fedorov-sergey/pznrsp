@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,78 +115,78 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУ</td>
-                                <td>Не учитывать:<br><b>▣или□</b></td>
+                                <td class="fw-bold col-name">НУ</td>
+                                <td class="col-desc">Не учитывать:<br><b>▣или□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">АР</td>
-                                <td>Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
+                                <td class="fw-bold col-name">АР</td>
+                                <td class="col-desc">Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">SysID</td>
-                                <td>SysID (внутренний идентификатор позиции)</td>
+                                <td class="fw-bold col-name">SysID</td>
+                                <td class="col-desc">SysID (внутренний идентификатор позиции)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">№</td>
-                                <td>№ п.п</td>
+                                <td class="fw-bold col-name">№</td>
+                                <td class="col-desc">№ п.п</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЕИ</td>
-                                <td>Ед. изм.</td>
+                                <td class="fw-bold col-name">ЕИ</td>
+                                <td class="col-desc">Ед. изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КолВо</td>
-                                <td>Количество/Всего</td>
+                                <td class="fw-bold col-name">КолВо</td>
+                                <td class="col-desc">Количество/Всего</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечания</td>
-                                <td>Примечания (синий текст)</td>
+                                <td class="fw-bold col-name">Примечания</td>
+                                <td class="col-desc">Примечания (синий текст)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Год МТР</td>
-                                <td>Год МТР, определённый по маске обоснования</td>
+                                <td class="fw-bold col-name">Год МТР</td>
+                                <td class="col-desc">Год МТР, определённый по маске обоснования</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Метод</td>
-                                <td>Метод расчета сметы<br>• <b>БМ</b> — Базисный метод расчета<br>• <b>БИМ</b> — Базисно-индексный метод расчета<br>• <b>РМ</b> — Ресурсный метод расчета<br>• <b>пусто</b> — не локальная смета</td>
+                                <td class="fw-bold col-name">Метод</td>
+                                <td class="col-desc">Метод расчета сметы<br>• <b>БМ</b> — Базисный метод расчета<br>• <b>БИМ</b> — Базисно-индексный метод расчета<br>• <b>РМ</b> — Ресурсный метод расчета<br>• <b>пусто</b> — не локальная смета</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУЦ</td>
-                                <td>ПКМ - Начальный уровень цен<br>• <b>ТЦ</b> — Текущие цены<br>• <b>БЦ</b> — Цены 2001г.<br>• <b>84</b> — Цены 1984г.</td>
+                                <td class="fw-bold col-name">НУЦ</td>
+                                <td class="col-desc">ПКМ - Начальный уровень цен<br>• <b>ТЦ</b> — Текущие цены<br>• <b>БЦ</b> — Цены 2001г.<br>• <b>84</b> — Цены 1984г.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПЗ</td>
-                                <td>Стоимость единицы/Всего</td>
+                                <td class="fw-bold col-name">ПЗ</td>
+                                <td class="col-desc">Стоимость единицы/Всего</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОЗП</td>
-                                <td>Стоимость единицы/основ.з.п.</td>
+                                <td class="fw-bold col-name">ОЗП</td>
+                                <td class="col-desc">Стоимость единицы/основ.з.п.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЭМ</td>
-                                <td>Стоимость единицы/эксп.маш.</td>
+                                <td class="fw-bold col-name">ЭМ</td>
+                                <td class="col-desc">Стоимость единицы/эксп.маш.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗПМ</td>
-                                <td>Стоимость единицы/з.п.мех.</td>
+                                <td class="fw-bold col-name">ЗПМ</td>
+                                <td class="col-desc">Стоимость единицы/з.п.мех.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">М</td>
-                                <td>Стоимость единицы/материалы</td>
+                                <td class="fw-bold col-name">М</td>
+                                <td class="col-desc">Стоимость единицы/материалы</td>
                             </tr>
                         </tbody>
                     </table>

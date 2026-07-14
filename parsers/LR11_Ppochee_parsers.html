@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,74 +115,74 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУ</td>
-                                <td>Не учитывать:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">НУ</td>
+                                <td class="col-desc">Не учитывать:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">АР</td>
-                                <td>Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
+                                <td class="fw-bold col-name">АР</td>
+                                <td class="col-desc">Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">SysID</td>
-                                <td>SysID (внутренний идентификатор позиции)</td>
+                                <td class="fw-bold col-name">SysID</td>
+                                <td class="col-desc">SysID (внутренний идентификатор позиции)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">№</td>
-                                <td>№ п.п</td>
+                                <td class="fw-bold col-name">№</td>
+                                <td class="col-desc">№ п.п</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЕИ</td>
-                                <td>Ед. изм.</td>
+                                <td class="fw-bold col-name">ЕИ</td>
+                                <td class="col-desc">Ед. изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КолВо</td>
-                                <td>Количество/Всего</td>
+                                <td class="fw-bold col-name">КолВо</td>
+                                <td class="col-desc">Количество/Всего</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечания</td>
-                                <td>Примечания (синий текст)</td>
+                                <td class="fw-bold col-name">Примечания</td>
+                                <td class="col-desc">Примечания (синий текст)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Способ</td>
-                                <td>Способ формирования цены при расчете в базисных ценах:<br>• <b>Суммирование стоимостей ресурсов</b><br>• <b>Прямое задание базисной цены</b><br>• <b>В соответствии с настройкой для всей сметы</b></td>
+                                <td class="fw-bold col-name">Способ</td>
+                                <td class="col-desc">Способ формирования цены при расчете в базисных ценах:<br>• <b>Суммирование стоимостей ресурсов</b><br>• <b>Прямое задание базисной цены</b><br>• <b>В соответствии с настройкой для всей сметы</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КодЗимний</td>
-                                <td>Код коэффициента зимнего удорожания</td>
+                                <td class="fw-bold col-name">КодЗимний</td>
+                                <td class="col-desc">Код коэффициента зимнего удорожания</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НаимЗимний</td>
-                                <td>Наименование коэффициента зимнего удорожания</td>
+                                <td class="fw-bold col-name">НаимЗимний</td>
+                                <td class="col-desc">Наименование коэффициента зимнего удорожания</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НеПоправка</td>
-                                <td>Не начислять территориальную поправку к базе 2001 г.<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">НеПоправка</td>
+                                <td class="col-desc">Не начислять территориальную поправку к базе 2001 г.<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПЗ</td>
-                                <td>ПЗ синхронизированы<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ПЗ</td>
+                                <td class="col-desc">ПЗ синхронизированы<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Разряд</td>
-                                <td>Средний разряд работ</td>
+                                <td class="fw-bold col-name">Разряд</td>
+                                <td class="col-desc">Средний разряд работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Исполнитель</td>
-                                <td>Исполнитель</td>
+                                <td class="fw-bold col-name">Исполнитель</td>
+                                <td class="col-desc">Исполнитель</td>
                             </tr>
                         </tbody>
                     </table>

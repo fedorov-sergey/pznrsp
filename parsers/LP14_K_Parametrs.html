@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,102 +115,102 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУ</td>
-                                <td>Не учитывать элемент в расчете документа</td>
+                                <td class="fw-bold col-name">НУ</td>
+                                <td class="col-desc">Не учитывать элемент в расчете документа</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Ур</td>
-                                <td>Уровень начисления коэффициента</td>
+                                <td class="fw-bold col-name">Ур</td>
+                                <td class="col-desc">Уровень начисления коэффициента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">БЦ</td>
-                                <td>Учитывать при расчете в базисных ценах</td>
+                                <td class="fw-bold col-name">БЦ</td>
+                                <td class="col-desc">Учитывать при расчете в базисных ценах</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЦ</td>
-                                <td>Учитывать при расчете в текущих ценах</td>
+                                <td class="fw-bold col-name">ТЦ</td>
+                                <td class="col-desc">Учитывать при расчете в текущих ценах</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование коэффициента</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование коэффициента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование коэффициента</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование коэффициента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">К</td>
-                                <td>Тип начисления коэффициента:<br>• <b>К</b> - К <br>• <b>%</b> - К в виде % <br>• <b>F</b> - Формула (смотреть столбец Формула)</td>
+                                <td class="fw-bold col-name">К</td>
+                                <td class="col-desc">Тип начисления коэффициента:<br>• <b>К</b> - К <br>• <b>%</b> - К в виде % <br>• <b>F</b> - Формула (смотреть столбец Формула)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПЗ</td>
-                                <td>Значение коэффициента к прямым затратам</td>
+                                <td class="fw-bold col-name">ПЗ</td>
+                                <td class="col-desc">Значение коэффициента к прямым затратам</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">П&gt;</td>
-                                <td>Распространять коэффициент к прямым затратам на все статьи</td>
+                                <td class="fw-bold col-name">П&gt;</td>
+                                <td class="col-desc">Распространять коэффициент к прямым затратам на все статьи</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОЗП</td>
-                                <td>Значение коэффициента к основной заработной плате</td>
+                                <td class="fw-bold col-name">ОЗП</td>
+                                <td class="col-desc">Значение коэффициента к основной заработной плате</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">О&gt;</td>
-                                <td>Применять коэффициент не только к заработной плате, но и к трудозатратам рабочих</td>
+                                <td class="fw-bold col-name">О&gt;</td>
+                                <td class="col-desc">Применять коэффициент не только к заработной плате, но и к трудозатратам рабочих</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЭМ</td>
-                                <td>Значение коэффициента к эксплуатации машин</td>
+                                <td class="fw-bold col-name">ЭМ</td>
+                                <td class="col-desc">Значение коэффициента к эксплуатации машин</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Э&gt;</td>
-                                <td>Распространять коэффициент к экспл. машин на зарплату машинистов</td>
+                                <td class="fw-bold col-name">Э&gt;</td>
+                                <td class="col-desc">Распространять коэффициент к экспл. машин на зарплату машинистов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Р</td>
-                                <td>Применять коэффициент не только к стоимости, но и к расходу машин и механизмов</td>
+                                <td class="fw-bold col-name">Р</td>
+                                <td class="col-desc">Применять коэффициент не только к стоимости, но и к расходу машин и механизмов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Ч</td>
-                                <td>НАчислять коэффициент к чистой ЭМ в виде К*(ЭМ-ЗПМ)</td>
+                                <td class="fw-bold col-name">Ч</td>
+                                <td class="col-desc">НАчислять коэффициент к чистой ЭМ в виде К*(ЭМ-ЗПМ)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗПМ</td>
-                                <td>Значение коэффициента к заработной плате машинистов</td>
+                                <td class="fw-bold col-name">ЗПМ</td>
+                                <td class="col-desc">Значение коэффициента к заработной плате машинистов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">З&gt;</td>
-                                <td>Применять коэффициент не только к заработной плате машинистов, но и к трудозатратам машинистов</td>
+                                <td class="fw-bold col-name">З&gt;</td>
+                                <td class="col-desc">Применять коэффициент не только к заработной плате машинистов, но и к трудозатратам машинистов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МАТ</td>
-                                <td>Значение коэффициента к стоимости материалов</td>
+                                <td class="fw-bold col-name">МАТ</td>
+                                <td class="col-desc">Значение коэффициента к стоимости материалов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">М&gt;</td>
-                                <td>Применять коэффициент не только к стоимости, но и к расходу материалов</td>
+                                <td class="fw-bold col-name">М&gt;</td>
+                                <td class="col-desc">Применять коэффициент не только к стоимости, но и к расходу материалов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Учет</td>
-                                <td>Способ учета коэффициента:<br>• <b>В позиции</b> - Учитывать коэффициент в каждой позиции<br>• <b>В итогах</b> - Учитывать коэффициент при подведении итогов</td>
+                                <td class="fw-bold col-name">Учет</td>
+                                <td class="col-desc">Способ учета коэффициента:<br>• <b>В позиции</b> - Учитывать коэффициент в каждой позиции<br>• <b>В итогах</b> - Учитывать коэффициент при подведении итогов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Раздел</td>
-                                <td>Разделы для начисления коэффициента</td>
+                                <td class="fw-bold col-name">Раздел</td>
+                                <td class="col-desc">Разделы для начисления коэффициента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Вид</td>
-                                <td>Виды работ для начисления коэффициента</td>
+                                <td class="fw-bold col-name">Вид</td>
+                                <td class="col-desc">Виды работ для начисления коэффициента</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Допол</td>
-                                <td>ПКМ-Параметры:<br>• <b>Скрывать формулу в итогах</b><br>• <b>Считать по методике 2020 (п.52)</b><br>• <b>Скрывать формулу в итогах, Считать по методике 2020 (п.52)<br></td>
+                                <td class="fw-bold col-name">Допол</td>
+                                <td class="col-desc">ПКМ-Параметры:<br>• <b>Скрывать формулу в итогах</b><br>• <b>Считать по методике 2020 (п.52)</b><br>• <b>Скрывать формулу в итогах, Считать по методике 2020 (п.52)<br></td>
                             </tr>
                         </tbody>
                     </table>

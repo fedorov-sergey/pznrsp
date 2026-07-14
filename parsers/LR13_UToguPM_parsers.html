@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,82 +115,82 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НУ</td>
-                                <td>Не учитывать:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">НУ</td>
+                                <td class="col-desc">Не учитывать:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">АР</td>
-                                <td>Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
+                                <td class="fw-bold col-name">АР</td>
+                                <td class="col-desc">Атрибуты ресурса (вкладка "Ресурсы"):<br>• <b>МЗ</b> — Материал заказчика<br>• <b>ВМ</b> — Возврат материала</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">SysID</td>
-                                <td>SysID (внутренний идентификатор позиции)</td>
+                                <td class="fw-bold col-name">SysID</td>
+                                <td class="col-desc">SysID (внутренний идентификатор позиции)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">№</td>
-                                <td>№ п.п</td>
+                                <td class="fw-bold col-name">№</td>
+                                <td class="col-desc">№ п.п</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование</td>
-                                <td>Обоснование</td>
+                                <td class="fw-bold col-name">Обоснование</td>
+                                <td class="col-desc">Обоснование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЕИ</td>
-                                <td>Ед. изм.</td>
+                                <td class="fw-bold col-name">ЕИ</td>
+                                <td class="col-desc">Ед. изм.</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КолВо</td>
-                                <td>Количество/Всего</td>
+                                <td class="fw-bold col-name">КолВо</td>
+                                <td class="col-desc">Количество/Всего</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечания</td>
-                                <td>Примечания (синий текст)</td>
+                                <td class="fw-bold col-name">Примечания</td>
+                                <td class="col-desc">Примечания (синий текст)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РесРасч</td>
-                                <td>Ресурсный расчет</td>
+                                <td class="fw-bold col-name">РесРасч</td>
+                                <td class="col-desc">Ресурсный расчет</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПЗ</td>
-                                <td>Всего ПЗ</td>
+                                <td class="fw-bold col-name">ПЗ</td>
+                                <td class="col-desc">Всего ПЗ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОЗП</td>
-                                <td>В том числе: ОЗП</td>
+                                <td class="fw-bold col-name">ОЗП</td>
+                                <td class="col-desc">В том числе: ОЗП</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЭМ</td>
-                                <td>В том числе: ЭМ</td>
+                                <td class="fw-bold col-name">ЭМ</td>
+                                <td class="col-desc">В том числе: ЭМ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗПМ</td>
-                                <td>В том числе: ЗПМ</td>
+                                <td class="fw-bold col-name">ЗПМ</td>
+                                <td class="col-desc">В том числе: ЗПМ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МАТ</td>
-                                <td>В том числе: МАТ</td>
+                                <td class="fw-bold col-name">МАТ</td>
+                                <td class="col-desc">В том числе: МАТ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЗ</td>
-                                <td>ТЗ</td>
+                                <td class="fw-bold col-name">ТЗ</td>
+                                <td class="col-desc">ТЗ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЗМ</td>
-                                <td>ТЗМ</td>
+                                <td class="fw-bold col-name">ТЗМ</td>
+                                <td class="col-desc">ТЗМ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТипСтр</td>
-                                <td>Тип строки итогов<br>• <b>ForOneBase</b> — На единицу в базисных ценах<br>• <b>ForOneCurr</b> — На единицу в текущих ценах<br>• <b>ForOneResBase</b> — На единицу в базисных ценах ресурсным методом<br>• <b>ForOneWithResChange</b> — На единицу в базисных ценах с учетом стоимости измененных ресурсов<br>• <b>PosK</b> — Коэффициенты к позиции<br>• <b>ItogK</b> — Коэффициенты к итогам<br>• <b>PosI</b> — Итого на единицу с учетом индекса<br>• <b>ItogI</b> — Всего с учетом индекса<br>• <b>TotalFo</b> — ВСЕГО на физобъем<br>• <b>FullPrice</b> — Полная стоимость позиции (с учетом индекса к СМР)<br>• <b>SMRI</b> — Всего с учетом индекса (попозиционного к СМР)<br>• <b>FullWithWinter</b> — Итого по позиции с ЗУ<br>• <b>TotalWithWinter</b> — Всего с учетом ЗУ<br>• <b>OsIndex</b> — Итого с учетом индекса к СМР, с привязкой по Графам ОС<br>• <b>BadPos</b> — Позиция, которую невозможно учесть в расчете<br>• <b>BadPosRoot</b> — Позиции, которые невозможно учесть в расчете сметы (корневой узел)<br>• <b>Nacl</b> — Накладные расходы<br>• <b>Plan</b> — Сметная прибыль<br>• <b>TotalWithNP</b> — Итого c накладными и см. прибылью<br>• <b>NSummRoot</b> — Накладные расходы, Итоговый показатель<br>• <b>PSummRoot</b> — Сметная прибыль, Итоговый показатель<br>• <b>NSummDet</b> — Накладные расходы детализация<br>• <b>PSummDet</b> — Сметная прибыль детализация<br>• <b>KSummRoot</b> — Итого прямые затраты по смете с учетом коэффициентов к итогам<br>• <b>KSummDet</b> — Коэффициент к итогам (разбивка по статьям затрат)<br>• <b>LzBase</b> — Сумма для начисления Лимитированных затрат<br>• <b>CalcError</b> — Ошибка в математическом расчете<br>• <b>KGroup</b> — Итог по группе позиций с одинаковым Общим коэффициентом<br>• <b>IndexGroup</b> — Итог по группе позиций с одинаковым Индексом по статьям затрат<br>• <b>NPGroup</b> — Итог по группе позиций с одинаковыми нормами НР и СП<br>• <b>VrGroup</b> — Группа видов работ/Вид работ<br>• <b>SMRIndexGroup</b> — Итого по группе позиций с одинаковым индексом к СМР<br>• <b>WinterGroup</b> — Итог по группе позиций с одинаковыми нормами Зимних удорожаний<br>• <b>PriceGroup</b> — Итог по группе позиций с одинаковым уровнем цен<br>• <b>OSGroup</b> — Итого Графе ОС<br>• <b>ChapterGroup</b> — Итого по Разделу в итогах сметы<br>• <b>Lz</b> — Сумма лимитированной затраты<br>• <b>CleanPrice</b> — Итого прямые затраты по разделу в Исходном уровне цен<br>• <b>GroupInitial</b> — Первая строка итогов в группе, информационная<br>• <b>SmetaTotal</b> — ВСЕГО по смете<br>• <b>SubTotal</b> — Итого (Промежуточный итог)<br>• <b>LevelSubTotal</b> — Итого (Промежуточный итог с разными уровнями начисления)<br>• <b>ChapterTotal</b> — Итого по разделу<br>• <b>OwnerMat Itog</b> — Материалы/Оборудование заказчика<br>• <b>Return Itog</b> — Возвратные материалы<br>• <b>NaclZpm</b> — Накладные расходы от ЗПМ<br>• <b>PlanZpm</b> — Сметная прибыль от ЗПМ<br>• <b>OwnerEq Itog</b> — Оборудование Заказчика<br>• <b>PZ</b> — Прямые затраты (Методика 2020)<br>• <b>OT</b> — Оплата труда рабочих (Методика 2020)<br>• <b>EM</b> — Эксплуатация машин (Методика 2020)<br>• <b>OTM</b> — Оплата труда Механизаторов (Методика 2020)<br>• <b>MAT</b> — Материалы (Методика 2020)<br>• <b>FOT</b> — Фонд оплаты труда (Методика 2020)<br>• <b>ZT</b> — Затраты труда (в позиции) (Методика 2020)<br>• <b>ZTm</b> — Затраты труда Машинистов (в позиции) (Методика 2020)<br>• <b>TZ</b> — Затраты труда (Методика 2020)<br>• <b>TZM</b> — Затраты труда Машинистов (Методика 2020)<br>• <b>Koefficients</b> — Узел итогов позиции Коэффициенты (Методика 2020)<br>• <b>TotalPos</b> — Узел итогов позиции Коэффициенты (Методика 2020)<br>• <b>Res</b> — Узел итогов позиции Коэффициенты (Методика 2020)<br>• <b>MatNoTransportation</b> — Материалы без учета транспорта (Методика 2020)<br>• <b>AdditionalTransportation</b> — Дополнительная перевозка (Методика 2020)<br>• <b>Transportation</b> — Перевозка (Методика 2020)<br>• <b>OS_Constr</b> — Итог по графе ОС Строительные работы (Методика 2020)<br>• <b>OS_Mount</b> — Итог по графе ОС Монтажные работы (Методика 2020)<br>• <b>OS_Mining</b> — Итог по графе ОС Горные работы (Методика 2020)<br>• <b>OS_Equip</b> — Итог по графе ОС Оборудование (Методика 2020)<br>• <b>OS_Other</b> — Итог по графе ОС Прочие (Методика 2020)<br>• <b>CategoryConstruction</b> — Итог по категории Строительные работы (Методика 2020)<br>• <b>CategoryRestoration</b> — Итог по категории Ремонтно-реставрационные работы (Методика 2020)<br>• <b>CategoryConstrTransportation</b> — Итог по категории Транспортные расходы (перевозка) для Строительных работ (Методика 2020)<br>• <b>CategoryTransportation</b> — Итог по категории Транспортные расходы (перевозка) (Методика 2020)<br>• <b>CategoryConstrAddTransportation</b> — Итог по категории дополнительная перевозка для Строительных работ (Методика 2020)<br>• <b>CategoryConstrRelated</b> — Итог по категории перевозка относимая на стоимость Строительных работ (Методика 2020)<br>• <b>CategoryMounting</b> — Итог по категории Монтажные работы (Методика 2020)<br>• <b>CategoryMountingTransportation</b> — Итог по категории Транспортные расходы (перевозка) для Монтажных работ (Методика 2020)<br>• <b>CategoryMountingAddTransportation</b> — Итог по категории дополнительная перевозка для Монтажных работ (Методика 2020)<br>• <b>CategoryMountingRelated</b> — Итог по категории перевозка относимая на стоимость Монтажных работ (Методика 2020)<br>• <b>CategoryEquipment</b> — Итог по категории Оборудование (Методика 2020)<br>• <b>CategoryEqEngineering</b> — Итог по категории Инженерное оборудование (Методика 2020)<br>• <b>CategoryEqTech</b> — Итог по категории Оборудование (Методика 2020)<br>• <b>CategoryEqLaboratory</b> — Итог по категории Лабораторное оборудование (Методика 2020)<br>• <b>CategoryEqVehicles</b> — Итог по категории Оборудование механизмы (Методика 2020)<br>• <b>CategoryEqTools</b> — Итог по категории Инструмент (Методика 2020)<br>• <b>CategoryEqInventory</b> — Итог по категории (Методика 2020)<br>• <b>CategoryOther</b> — Итог по категории Прочие затраты (Методика 2020)<br>• <b>CategoryCommissioning</b> — Итог по категории Пусконаладочные работы (Методика 2020)<br>• <b>CategoryOtherTransportation</b> — Итог по категории Перевозка, относимая на стоимость прочих работ (Методика 2020)<br>• <b>CategoryOtherAddTransportation</b> — Итог по категории дополнительная перевозка для Прочих работ (Методика 2020)<br>• <b>CategoryOtherRelated</b> — Итог по категории Отдельные виды работ и затрат, относимые на стоимость прочих работ (Методика 2020)<br>• <b>CategoryMining</b> — Итог по категории Горные работы (Методика 2020)<br>• <b>CategoryMiningAddTransportation</b> — Итог по категории дополнительная перевозка для Горных работ (Методика 2020)<br>• <b>CategoryEqAddTransportation</b> — Итог по категории дополнительная перевозка, относимая на стоимость оборудования (Методика 2020)<br>• <b>CategoryOtherFineArt</b> — Работы по созданию произведений изобразительного искусства монументального характера (Методика 2020)<br>• <b>CategoryTranspDumpTrucks</b> — Итог по категории Перевозка (Автомобили-самосвалы)<br>• <b>AuxMat</b> — Вспомогательные ненормируемые материальные ресурсы</td>
+                                <td class="fw-bold col-name">ТипСтр</td>
+                                <td class="col-desc">Тип строки итогов<br>• <b>ForOneBase</b> — На единицу в базисных ценах<br>• <b>ForOneCurr</b> — На единицу в текущих ценах<br>• <b>ForOneResBase</b> — На единицу в базисных ценах ресурсным методом<br>• <b>ForOneWithResChange</b> — На единицу в базисных ценах с учетом стоимости измененных ресурсов<br>• <b>PosK</b> — Коэффициенты к позиции<br>• <b>ItogK</b> — Коэффициенты к итогам<br>• <b>PosI</b> — Итого на единицу с учетом индекса<br>• <b>ItogI</b> — Всего с учетом индекса<br>• <b>TotalFo</b> — ВСЕГО на физобъем<br>• <b>FullPrice</b> — Полная стоимость позиции (с учетом индекса к СМР)<br>• <b>SMRI</b> — Всего с учетом индекса (попозиционного к СМР)<br>• <b>FullWithWinter</b> — Итого по позиции с ЗУ<br>• <b>TotalWithWinter</b> — Всего с учетом ЗУ<br>• <b>OsIndex</b> — Итого с учетом индекса к СМР, с привязкой по Графам ОС<br>• <b>BadPos</b> — Позиция, которую невозможно учесть в расчете<br>• <b>BadPosRoot</b> — Позиции, которые невозможно учесть в расчете сметы (корневой узел)<br>• <b>Nacl</b> — Накладные расходы<br>• <b>Plan</b> — Сметная прибыль<br>• <b>TotalWithNP</b> — Итого c накладными и см. прибылью<br>• <b>NSummRoot</b> — Накладные расходы, Итоговый показатель<br>• <b>PSummRoot</b> — Сметная прибыль, Итоговый показатель<br>• <b>NSummDet</b> — Накладные расходы детализация<br>• <b>PSummDet</b> — Сметная прибыль детализация<br>• <b>KSummRoot</b> — Итого прямые затраты по смете с учетом коэффициентов к итогам<br>• <b>KSummDet</b> — Коэффициент к итогам (разбивка по статьям затрат)<br>• <b>LzBase</b> — Сумма для начисления Лимитированных затрат<br>• <b>CalcError</b> — Ошибка в математическом расчете<br>• <b>KGroup</b> — Итог по группе позиций с одинаковым Общим коэффициентом<br>• <b>IndexGroup</b> — Итог по группе позиций с одинаковым Индексом по статьям затрат<br>• <b>NPGroup</b> — Итог по группе позиций с одинаковыми нормами НР и СП<br>• <b>VrGroup</b> — Группа видов работ/Вид работ<br>• <b>SMRIndexGroup</b> — Итого по группе позиций с одинаковым индексом к СМР<br>• <b>WinterGroup</b> — Итог по группе позиций с одинаковыми нормами Зимних удорожаний<br>• <b>PriceGroup</b> — Итог по группе позиций с одинаковым уровнем цен<br>• <b>OSGroup</b> — Итого Графе ОС<br>• <b>ChapterGroup</b> — Итого по Разделу в итогах сметы<br>• <b>Lz</b> — Сумма лимитированной затраты<br>• <b>CleanPrice</b> — Итого прямые затраты по разделу в Исходном уровне цен<br>• <b>GroupInitial</b> — Первая строка итогов в группе, информационная<br>• <b>SmetaTotal</b> — ВСЕГО по смете<br>• <b>SubTotal</b> — Итого (Промежуточный итог)<br>• <b>LevelSubTotal</b> — Итого (Промежуточный итог с разными уровнями начисления)<br>• <b>ChapterTotal</b> — Итого по разделу<br>• <b>OwnerMat Itog</b> — Материалы/Оборудование заказчика<br>• <b>Return Itog</b> — Возвратные материалы<br>• <b>NaclZpm</b> — Накладные расходы от ЗПМ<br>• <b>PlanZpm</b> — Сметная прибыль от ЗПМ<br>• <b>OwnerEq Itog</b> — Оборудование Заказчика<br>• <b>PZ</b> — Прямые затраты (Методика 2020)<br>• <b>OT</b> — Оплата труда рабочих (Методика 2020)<br>• <b>EM</b> — Эксплуатация машин (Методика 2020)<br>• <b>OTM</b> — Оплата труда Механизаторов (Методика 2020)<br>• <b>MAT</b> — Материалы (Методика 2020)<br>• <b>FOT</b> — Фонд оплаты труда (Методика 2020)<br>• <b>ZT</b> — Затраты труда (в позиции) (Методика 2020)<br>• <b>ZTm</b> — Затраты труда Машинистов (в позиции) (Методика 2020)<br>• <b>TZ</b> — Затраты труда (Методика 2020)<br>• <b>TZM</b> — Затраты труда Машинистов (Методика 2020)<br>• <b>Koefficients</b> — Узел итогов позиции Коэффициенты (Методика 2020)<br>• <b>TotalPos</b> — Узел итогов позиции Коэффициенты (Методика 2020)<br>• <b>Res</b> — Узел итогов позиции Коэффициенты (Методика 2020)<br>• <b>MatNoTransportation</b> — Материалы без учета транспорта (Методика 2020)<br>• <b>AdditionalTransportation</b> — Дополнительная перевозка (Методика 2020)<br>• <b>Transportation</b> — Перевозка (Методика 2020)<br>• <b>OS_Constr</b> — Итог по графе ОС Строительные работы (Методика 2020)<br>• <b>OS_Mount</b> — Итог по графе ОС Монтажные работы (Методика 2020)<br>• <b>OS_Mining</b> — Итог по графе ОС Горные работы (Методика 2020)<br>• <b>OS_Equip</b> — Итог по графе ОС Оборудование (Методика 2020)<br>• <b>OS_Other</b> — Итог по графе ОС Прочие (Методика 2020)<br>• <b>CategoryConstruction</b> — Итог по категории Строительные работы (Методика 2020)<br>• <b>CategoryRestoration</b> — Итог по категории Ремонтно-реставрационные работы (Методика 2020)<br>• <b>CategoryConstrTransportation</b> — Итог по категории Транспортные расходы (перевозка) для Строительных работ (Методика 2020)<br>• <b>CategoryTransportation</b> — Итог по категории Транспортные расходы (перевозка) (Методика 2020)<br>• <b>CategoryConstrAddTransportation</b> — Итог по категории дополнительная перевозка для Строительных работ (Методика 2020)<br>• <b>CategoryConstrRelated</b> — Итог по категории перевозка относимая на стоимость Строительных работ (Методика 2020)<br>• <b>CategoryMounting</b> — Итог по категории Монтажные работы (Методика 2020)<br>• <b>CategoryMountingTransportation</b> — Итог по категории Транспортные расходы (перевозка) для Монтажных работ (Методика 2020)<br>• <b>CategoryMountingAddTransportation</b> — Итог по категории дополнительная перевозка для Монтажных работ (Методика 2020)<br>• <b>CategoryMountingRelated</b> — Итог по категории перевозка относимая на стоимость Монтажных работ (Методика 2020)<br>• <b>CategoryEquipment</b> — Итог по категории Оборудование (Методика 2020)<br>• <b>CategoryEqEngineering</b> — Итог по категории Инженерное оборудование (Методика 2020)<br>• <b>CategoryEqTech</b> — Итог по категории Оборудование (Методика 2020)<br>• <b>CategoryEqLaboratory</b> — Итог по категории Лабораторное оборудование (Методика 2020)<br>• <b>CategoryEqVehicles</b> — Итог по категории Оборудование механизмы (Методика 2020)<br>• <b>CategoryEqTools</b> — Итог по категории Инструмент (Методика 2020)<br>• <b>CategoryEqInventory</b> — Итог по категории (Методика 2020)<br>• <b>CategoryOther</b> — Итог по категории Прочие затраты (Методика 2020)<br>• <b>CategoryCommissioning</b> — Итог по категории Пусконаладочные работы (Методика 2020)<br>• <b>CategoryOtherTransportation</b> — Итог по категории Перевозка, относимая на стоимость прочих работ (Методика 2020)<br>• <b>CategoryOtherAddTransportation</b> — Итог по категории дополнительная перевозка для Прочих работ (Методика 2020)<br>• <b>CategoryOtherRelated</b> — Итог по категории Отдельные виды работ и затрат, относимые на стоимость прочих работ (Методика 2020)<br>• <b>CategoryMining</b> — Итог по категории Горные работы (Методика 2020)<br>• <b>CategoryMiningAddTransportation</b> — Итог по категории дополнительная перевозка для Горных работ (Методика 2020)<br>• <b>CategoryEqAddTransportation</b> — Итог по категории дополнительная перевозка, относимая на стоимость оборудования (Методика 2020)<br>• <b>CategoryOtherFineArt</b> — Работы по созданию произведений изобразительного искусства монументального характера (Методика 2020)<br>• <b>CategoryTranspDumpTrucks</b> — Итог по категории Перевозка (Автомобили-самосвалы)<br>• <b>AuxMat</b> — Вспомогательные ненормируемые материальные ресурсы</td>
                             </tr>
                         </tbody>
                     </table>

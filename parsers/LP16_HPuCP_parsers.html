@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,70 +115,70 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПримДоп</td>
-                                <td>Применять дополнительные нормы НР и СП при расчете в текущих ценах:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ПримДоп</td>
+                                <td class="col-desc">Применять дополнительные нормы НР и СП при расчете в текущих ценах:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СпособНР</td>
-                                <td>Способ задания накладных расходов:<br>• <b>По видам</b> - По видам работ<br>• <b>Укрупненный</b> - Укрупненный норматив по виду строительства</td>
+                                <td class="fw-bold col-name">СпособНР</td>
+                                <td class="col-desc">Способ задания накладных расходов:<br>• <b>По видам</b> - По видам работ<br>• <b>Укрупненный</b> - Укрупненный норматив по виду строительства</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НормНР</td>
-                                <td>Норматив для расчета в текущих ценах и в ценах 2001 г.: НР (%)</td>
+                                <td class="fw-bold col-name">НормНР</td>
+                                <td class="col-desc">Норматив для расчета в текущих ценах и в ценах 2001 г.: НР (%)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НормНРот</td>
-                                <td>Норматив для расчета в текущих ценах и в ценах 2001 г.: от:<br>• <b>ФОТ</b><br>• <b>ПЗ</b><br>• <b>ОЗП</b><br>• <b>ЭМ</b><br>• <b>ЗПМ</b><br>• <b>ФОТ</b><br>• <b>МАТ</b></td>
+                                <td class="fw-bold col-name">НормНРот</td>
+                                <td class="col-desc">Норматив для расчета в текущих ценах и в ценах 2001 г.: от:<br>• <b>ФОТ</b><br>• <b>ПЗ</b><br>• <b>ОЗП</b><br>• <b>ЭМ</b><br>• <b>ЗПМ</b><br>• <b>ФОТ</b><br>• <b>МАТ</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НРсИнд</td>
-                                <td>Использовать норматив НР в соответствии с индексом:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">НРсИнд</td>
+                                <td class="col-desc">Использовать норматив НР в соответствии с индексом:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СпособСП</td>
-                                <td>Способ задания сметной прибыли:<br>• <b>По видам</b> - По видам работ<br>• <b>Укрупненный</b> - Укрупненный норматив по виду строительства</td>
+                                <td class="fw-bold col-name">СпособСП</td>
+                                <td class="col-desc">Способ задания сметной прибыли:<br>• <b>По видам</b> - По видам работ<br>• <b>Укрупненный</b> - Укрупненный норматив по виду строительства</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НормСП</td>
-                                <td>Норматив для расчета в текущих ценах и в ценах 2001 г.: СП (%)</td>
+                                <td class="fw-bold col-name">НормСП</td>
+                                <td class="col-desc">Норматив для расчета в текущих ценах и в ценах 2001 г.: СП (%)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НормСПот</td>
-                                <td>Норматив для расчета в текущих ценах и в ценах 2001 г.: от:<br>• <b>ФОТ</b><br>• <b>ПЗ</b><br>• <b>ОЗП</b><br>• <b>ЭМ</b><br>• <b>ЗПМ</b><br>• <b>ФОТ</b><br>• <b>МАТ</b></td>
+                                <td class="fw-bold col-name">НормСПот</td>
+                                <td class="col-desc">Норматив для расчета в текущих ценах и в ценах 2001 г.: от:<br>• <b>ФОТ</b><br>• <b>ПЗ</b><br>• <b>ОЗП</b><br>• <b>ЭМ</b><br>• <b>ЗПМ</b><br>• <b>ФОТ</b><br>• <b>МАТ</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СПсИнд</td>
-                                <td>Использовать норматив СП в соответствии с индексом:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">СПсИнд</td>
+                                <td class="col-desc">Использовать норматив СП в соответствии с индексом:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОтдНРиСП</td>
-                                <td>Отдельное начисление НР и СП на заработную плату механизаторов (ЗПМ):<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ОтдНРиСП</td>
+                                <td class="col-desc">Отдельное начисление НР и СП на заработную плату механизаторов (ЗПМ):<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НРвБИМиРМ</td>
-                                <td>Нормативы для расчета базисно-индексным и ресурсным методом: НР (%)</td>
+                                <td class="fw-bold col-name">НРвБИМиРМ</td>
+                                <td class="col-desc">Нормативы для расчета базисно-индексным и ресурсным методом: НР (%)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СПвБИМиРМ</td>
-                                <td>Нормативы для расчета базисно-индексным и ресурсным методом: СП (%)</td>
+                                <td class="fw-bold col-name">СПвБИМиРМ</td>
+                                <td class="col-desc">Нормативы для расчета базисно-индексным и ресурсным методом: СП (%)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НРвБЦ</td>
-                                <td>Нормативы для расчета базисных ценах: НР (%)</td>
+                                <td class="fw-bold col-name">НРвБЦ</td>
+                                <td class="col-desc">Нормативы для расчета базисных ценах: НР (%)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СПвБЦ</td>
-                                <td>Нормативы для расчета базисных ценах: СП (%)</td>
+                                <td class="fw-bold col-name">СПвБЦ</td>
+                                <td class="col-desc">Нормативы для расчета базисных ценах: СП (%)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СуммНорм</td>
-                                <td>Начислять НР и СП от ЗПМ в виде суммарного норматива НР + СП:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">СуммНорм</td>
+                                <td class="col-desc">Начислять НР и СП от ЗПМ в виде суммарного норматива НР + СП:<br><b>▣/□</b></td>
                             </tr>
                         </tbody>
                     </table>

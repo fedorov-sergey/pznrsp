@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,34 +115,34 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Всё</td>
-                                <td>Полное содержимое файла "Data.sign" в текстовом виде (кодировка ANSI/windows-1251)</td>
+                                <td class="fw-bold col-name">Всё</td>
+                                <td class="col-desc">Полное содержимое файла "Data.sign" в текстовом виде (кодировка ANSI/windows-1251)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Всё, байты</td>
-                                <td>Полное содержимое файла "Data.sign" в шестнадцатеричном представлении</td>
+                                <td class="fw-bold col-name">Всё, байты</td>
+                                <td class="col-desc">Полное содержимое файла "Data.sign" в шестнадцатеричном представлении</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Пользователь</td>
-                                <td>Физическое или юридическое лицо, на чье имя куплена программа</td>
+                                <td class="fw-bold col-name">Пользователь</td>
+                                <td class="col-desc">Физическое или юридическое лицо, на чье имя куплена программа</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">HEX</td>
-                                <td>HEX (4 байта перед подписью в little-endian порядке, без префикса 0x)</td>
+                                <td class="fw-bold col-name">HEX</td>
+                                <td class="col-desc">HEX (4 байта перед подписью в little-endian порядке, без префикса 0x)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ID</td>
-                                <td>Десятичное представление значения HEX</td>
+                                <td class="fw-bold col-name">ID</td>
+                                <td class="col-desc">Десятичное представление значения HEX</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Прочее</td>
-                                <td>Последние 18 символов из полного текста файла</td>
+                                <td class="fw-bold col-name">Прочее</td>
+                                <td class="col-desc">Последние 18 символов из полного текста файла</td>
                             </tr>
                         </tbody>
                     </table>

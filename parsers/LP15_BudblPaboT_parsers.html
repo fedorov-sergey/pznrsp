@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,34 +115,34 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Вид работ</td>
-                                <td>Виды работ:<br>• Действующие каталоги видов работ<br>• Отраслевые, фирменные, территориальные и прочие каталоги видов работ<br>• Недействующие каталоги видов работ</td>
+                                <td class="fw-bold col-name">Вид работ</td>
+                                <td class="col-desc">Виды работ:<br>• Действующие каталоги видов работ<br>• Отраслевые, фирменные, территориальные и прочие каталоги видов работ<br>• Недействующие каталоги видов работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Норматив НР и СП</td>
-                                <td>Используемый справочник нормативов НР и СП)</td>
+                                <td class="fw-bold col-name">Норматив НР и СП</td>
+                                <td class="col-desc">Используемый справочник нормативов НР и СП)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Коэф НР и СП</td>
-                                <td>Используемый справочник коэффициентов к НР и СП</td>
+                                <td class="fw-bold col-name">Коэф НР и СП</td>
+                                <td class="col-desc">Используемый справочник коэффициентов к НР и СП</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ВидРабСкр</td>
-                                <td>Виды работ (ссылка на документ):<br>• Действующие каталоги видов работ<br>• Отраслевые, фирменные, территориальные и прочие каталоги видов работ<br>• Недействующие каталоги видов работ</td>
+                                <td class="fw-bold col-name">ВидРабСкр</td>
+                                <td class="col-desc">Виды работ (ссылка на документ):<br>• Действующие каталоги видов работ<br>• Отраслевые, фирменные, территориальные и прочие каталоги видов работ<br>• Недействующие каталоги видов работ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НормСкр</td>
-                                <td>Используемый справочник нормативов НР и СП (ссылка на документ)</td>
+                                <td class="fw-bold col-name">НормСкр</td>
+                                <td class="col-desc">Используемый справочник нормативов НР и СП (ссылка на документ)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">КоэфСкр</td>
-                                <td>Используемый справочник коэффициентов к НР и СП (ссылка на документ)</td>
+                                <td class="fw-bold col-name">КоэфСкр</td>
+                                <td class="col-desc">Используемый справочник коэффициентов к НР и СП (ссылка на документ)</td>
                             </tr>
                         </tbody>
                     </table>

@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,22 +115,22 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование ошибки</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование ошибки</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Тип</td>
-                                <td>Тип ошибки:<br>• <b>Способ индексации несовместим с методикой расчета</b> — InvalidIndexing<br>• <b>Математическая ошибка при расчете позиции</b> — MathError<br>• <b>Ошибка в формуле расчета объема позиции</b> — QtyFxError<br>• <b>Не задан вид работ</b> — NoVidRab<br>• <b>Цена не совместима с методикой расчета</b> — IncompPrice<br>• <b>Не задан индекс к позиции</b> — IndexMissing<br>• <b>Не задан индекс пересчета из уровня 1984 в 2001</b> — Index8401Missing<br>• <b>Несоответствие видов работ 1984 и 2001 года</b> — Vr8401Mismatch<br>• <b>Не задан индекс к ресурсу(ам)</b> — ResIndexMissing<br>• <b>Ошибка ввода</b> — ReturnError<br>• <b>Неверно задана базисная стоимость ресурса</b> — ResPriceBaseError<br>• <b>Неверно задана текущая стоимость позиции</b> — ResPriceCurrError<br>• <b>Неверно задана базисная стоимость позиции</b> — PosPriceBaseError<br>• <b>Неверно задана текущая стоимость позиции</b> — PosPriceCurrError<br>• <b>Ошибка в коэффициенте к позиции</b> — PosKFxError<br>• <b>Коэффициент к позиции не совместим с методикой</b> — IncompPosK<br>• <b>Несовместимый индекс к позиции</b> — IncompIndex<br>• <b>Ошибка в коэффициенте к ресурсу</b> — ResKFxError<br>• <b>Коэффициент к ресурсу не совместим с методикой расчета</b> — IncompResK</td>
+                                <td class="fw-bold col-name">Тип</td>
+                                <td class="col-desc">Тип ошибки:<br>• <b>Способ индексации несовместим с методикой расчета</b> — InvalidIndexing<br>• <b>Математическая ошибка при расчете позиции</b> — MathError<br>• <b>Ошибка в формуле расчета объема позиции</b> — QtyFxError<br>• <b>Не задан вид работ</b> — NoVidRab<br>• <b>Цена не совместима с методикой расчета</b> — IncompPrice<br>• <b>Не задан индекс к позиции</b> — IndexMissing<br>• <b>Не задан индекс пересчета из уровня 1984 в 2001</b> — Index8401Missing<br>• <b>Несоответствие видов работ 1984 и 2001 года</b> — Vr8401Mismatch<br>• <b>Не задан индекс к ресурсу(ам)</b> — ResIndexMissing<br>• <b>Ошибка ввода</b> — ReturnError<br>• <b>Неверно задана базисная стоимость ресурса</b> — ResPriceBaseError<br>• <b>Неверно задана текущая стоимость позиции</b> — ResPriceCurrError<br>• <b>Неверно задана базисная стоимость позиции</b> — PosPriceBaseError<br>• <b>Неверно задана текущая стоимость позиции</b> — PosPriceCurrError<br>• <b>Ошибка в коэффициенте к позиции</b> — PosKFxError<br>• <b>Коэффициент к позиции не совместим с методикой</b> — IncompPosK<br>• <b>Несовместимый индекс к позиции</b> — IncompIndex<br>• <b>Ошибка в коэффициенте к ресурсу</b> — ResKFxError<br>• <b>Коэффициент к ресурсу не совместим с методикой расчета</b> — IncompResK</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Метод</td>
-                                <td>Метод расчета:<br>• <b>РМ</b> — ресурсный метод<br>• <b>БИМ</b> — базисно-индексный метод<br>• <b>БИМ</b> — базисный метод</td>
+                                <td class="fw-bold col-name">Метод</td>
+                                <td class="col-desc">Метод расчета:<br>• <b>РМ</b> — ресурсный метод<br>• <b>БИМ</b> — базисно-индексный метод<br>• <b>БИМ</b> — базисный метод</td>
                             </tr>
                         </tbody>
                     </table>

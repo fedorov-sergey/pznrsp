@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,26 +115,26 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Данные</td>
-                                <td>Последовательно все данные файла Data.xml в виде текста с сохранением отступов и форматирования</td>
+                                <td class="fw-bold col-name">Данные</td>
+                                <td class="col-desc">Последовательно все данные файла Data.xml в виде текста с сохранением отступов и форматирования</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Строки</td>
-                                <td>Количество строк в содержимом Data.xml</td>
+                                <td class="fw-bold col-name">Строки</td>
+                                <td class="col-desc">Количество строк в содержимом Data.xml</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Слова</td>
-                                <td>Количество слов в содержимом Data.xml</td>
+                                <td class="fw-bold col-name">Слова</td>
+                                <td class="col-desc">Количество слов в содержимом Data.xml</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Буквы</td>
-                                <td>Количество букв в содержимом Data.xml</td>
+                                <td class="fw-bold col-name">Буквы</td>
+                                <td class="col-desc">Количество букв в содержимом Data.xml</td>
                             </tr>
                         </tbody>
                     </table>

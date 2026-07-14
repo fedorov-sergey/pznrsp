@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,42 +115,42 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЛН</td>
-                                <td>Локальный номер:</td>
+                                <td class="fw-bold col-name">ЛН</td>
+                                <td class="col-desc">Локальный номер:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РН</td>
-                                <td>Регистрационный номер:</td>
+                                <td class="fw-bold col-name">РН</td>
+                                <td class="col-desc">Регистрационный номер:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Работа</td>
-                                <td>Наименование работ и затрат:</td>
+                                <td class="fw-bold col-name">Работа</td>
+                                <td class="col-desc">Наименование работ и затрат:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Стройка</td>
-                                <td>Наименование стройки:</td>
+                                <td class="fw-bold col-name">Стройка</td>
+                                <td class="col-desc">Наименование стройки:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Этап</td>
-                                <td>Наименование этапа (очередь, пусковой комплекс):</td>
+                                <td class="fw-bold col-name">Этап</td>
+                                <td class="col-desc">Наименование этапа (очередь, пусковой комплекс):</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Объект</td>
-                                <td>Наименование объекта:</td>
+                                <td class="fw-bold col-name">Объект</td>
+                                <td class="col-desc">Наименование объекта:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечание</td>
-                                <td>Примечание:</td>
+                                <td class="fw-bold col-name">Примечание</td>
+                                <td class="col-desc">Примечание:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Утвержден</td>
-                                <td>Документ об утверждении:</td>
+                                <td class="fw-bold col-name">Утвержден</td>
+                                <td class="col-desc">Документ об утверждении:</td>
                             </tr>
                         </tbody>
                     </table>

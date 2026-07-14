@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,38 +115,38 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Нумерация</td>
-                                <td>Нумерация:<br>• <b>по порядку с 1</b> - Нумерация по порядку (Начальный номер для нумерации по умолчанию)<br>• <b>по порядку с ЧИСЛО</b> - Нумерация по порядку (Начальный номер для нумерации ЧИСЛО)<br>• <b>по разделам дробная</b> - Нумерация по разделам дробная<br>• <b>по разделам целая</b> - Нумерация по разделам целая</td>
+                                <td class="fw-bold col-name">Нумерация</td>
+                                <td class="col-desc">Нумерация:<br>• <b>по порядку с 1</b> - Нумерация по порядку (Начальный номер для нумерации по умолчанию)<br>• <b>по порядку с ЧИСЛО</b> - Нумерация по порядку (Начальный номер для нумерации ЧИСЛО)<br>• <b>по разделам дробная</b> - Нумерация по разделам дробная<br>• <b>по разделам целая</b> - Нумерация по разделам целая</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">АвтоПЕ</td>
-                                <td>Автоматическая перенумерация</td>
+                                <td class="fw-bold col-name">АвтоПЕ</td>
+                                <td class="col-desc">Автоматическая перенумерация</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПропускБН</td>
-                                <td>Пропускать при перенумерации позиции без номера</td>
+                                <td class="fw-bold col-name">ПропускБН</td>
+                                <td class="col-desc">Пропускать при перенумерации позиции без номера</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПропускНУ</td>
-                                <td>Пропускать при перенумерации неученные позиции</td>
+                                <td class="fw-bold col-name">ПропускНУ</td>
+                                <td class="col-desc">Пропускать при перенумерации неученные позиции</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ДопПодч</td>
-                                <td>Дополнительная нумерация подчиненных позиций</td>
+                                <td class="fw-bold col-name">ДопПодч</td>
+                                <td class="col-desc">Дополнительная нумерация подчиненных позиций</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Способ</td>
-                                <td>Способ формирования физобъема позиций сметы при суммировании позиций дефектной ведомости:<br>• <b>СР с примечанием</b> - Сумма результатов с примечанием<br>• <b>СР</b> - Сумма результатов</td>
+                                <td class="fw-bold col-name">Способ</td>
+                                <td class="col-desc">Способ формирования физобъема позиций сметы при суммировании позиций дефектной ведомости:<br>• <b>СР с примечанием</b> - Сумма результатов с примечанием<br>• <b>СР</b> - Сумма результатов</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Ссылка</td>
-                                <td>Ссылка на файл ведомости объемов работ:</td>
+                                <td class="fw-bold col-name">Ссылка</td>
+                                <td class="col-desc">Ссылка на файл ведомости объемов работ:</td>
                             </tr>
                         </tbody>
                     </table>

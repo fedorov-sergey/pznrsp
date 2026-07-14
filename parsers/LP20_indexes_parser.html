@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,46 +115,46 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Индексы</td>
-                                <td>Индивидуальные индексы для позиций сметы:<br>• <b>Не использовать</b> - Не использовать индексы<br>• <b>В каждой позиции</b> - Применять индексы по статьям затрат в каждой позиции сметы<br>• <b>При подведении итогов</b> - Применять индексы по статьям затрат при подведении итогов<br>• <b>к СМР</b> - Применять индексы к СМР</td>
+                                <td class="fw-bold col-name">Индексы</td>
+                                <td class="col-desc">Индивидуальные индексы для позиций сметы:<br>• <b>Не использовать</b> - Не использовать индексы<br>• <b>В каждой позиции</b> - Применять индексы по статьям затрат в каждой позиции сметы<br>• <b>При подведении итогов</b> - Применять индексы по статьям затрат при подведении итогов<br>• <b>к СМР</b> - Применять индексы к СМР</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПрДО</td>
-                                <td>Применять единый индекс в итогах до начисления лимитированных затрат</td>
+                                <td class="fw-bold col-name">ПрДО</td>
+                                <td class="col-desc">Применять единый индекс в итогах до начисления лимитированных затрат</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование ДО</td>
-                                <td>Обоснование индекса:</td>
+                                <td class="fw-bold col-name">Обоснование ДО</td>
+                                <td class="col-desc">Обоснование индекса:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Значение ДО</td>
-                                <td>Значение (Формула):</td>
+                                <td class="fw-bold col-name">Значение ДО</td>
+                                <td class="col-desc">Значение (Формула):</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ПрПО</td>
-                                <td>Применять единый индекс в итогах после начисления лимитированных затрат</td>
+                                <td class="fw-bold col-name">ПрПО</td>
+                                <td class="col-desc">Применять единый индекс в итогах после начисления лимитированных затрат</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обоснование ПО</td>
-                                <td>Обоснование индекса:</td>
+                                <td class="fw-bold col-name">Обоснование ПО</td>
+                                <td class="col-desc">Обоснование индекса:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Значение ПО</td>
-                                <td>Значение (Формула):</td>
+                                <td class="fw-bold col-name">Значение ПО</td>
+                                <td class="col-desc">Значение (Формула):</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Тип объекта</td>
-                                <td>Тип объекта строительства:<br>Дополнительная информация об индексах изменения сметной стоимости</td>
+                                <td class="fw-bold col-name">Тип объекта</td>
+                                <td class="col-desc">Тип объекта строительства:<br>Дополнительная информация об индексах изменения сметной стоимости</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Отрасль</td>
-                                <td>Отрасль народного хозяйства для оборудования:<br>Дополнительная информация об индексах изменения сметной стоимости</td>
+                                <td class="fw-bold col-name">Отрасль</td>
+                                <td class="col-desc">Отрасль народного хозяйства для оборудования:<br>Дополнительная информация об индексах изменения сметной стоимости</td>
                             </tr>
                         </tbody>
                     </table>

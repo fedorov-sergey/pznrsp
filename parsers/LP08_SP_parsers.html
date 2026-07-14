@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,30 +115,30 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">НаимФРСН</td>
-                                <td>Наименование в ФРСН:</td>
+                                <td class="fw-bold col-name">НаимФРСН</td>
+                                <td class="col-desc">Наименование в ФРСН:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Тип</td>
-                                <td>Тип нормативов:<br>• <b>Не задано</b><br>• <b>ГСН</b><br>• <b>ОСН</b><br>• <b>ТЕР</b><br>• <b>ИСН</b><br>• <b>СИ</b> - Справочная информация</td>
+                                <td class="fw-bold col-name">Тип</td>
+                                <td class="col-desc">Тип нормативов:<br>• <b>Не задано</b><br>• <b>ГСН</b><br>• <b>ОСН</b><br>• <b>ТЕР</b><br>• <b>ИСН</b><br>• <b>СИ</b> - Справочная информация</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РегНомер</td>
-                                <td>Регистрационный номер в ФРСН:</td>
+                                <td class="fw-bold col-name">РегНомер</td>
+                                <td class="col-desc">Регистрационный номер в ФРСН:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ДатаВкл</td>
-                                <td>Дата включения в ФРСН:</td>
+                                <td class="fw-bold col-name">ДатаВкл</td>
+                                <td class="col-desc">Дата включения в ФРСН:</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Реквизиты</td>
-                                <td>Реквизиты приказов об утверждении:</td>
+                                <td class="fw-bold col-name">Реквизиты</td>
+                                <td class="col-desc">Реквизиты приказов об утверждении:</td>
                             </tr>
                         </tbody>
                     </table>

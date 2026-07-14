@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,62 +116,62 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Код</td>
-                                <td>Код индекса</td>
+                                <td class="fw-bold col-name">Код</td>
+                                <td class="col-desc">Код индекса</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наименование</td>
-                                <td>Наименование индекса</td>
+                                <td class="fw-bold col-name">Наименование</td>
+                                <td class="col-desc">Наименование индекса</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ОЗП</td>
-                                <td>Индексы по статьям затрат ОЗП</td>
+                                <td class="fw-bold col-name">ОЗП</td>
+                                <td class="col-desc">Индексы по статьям затрат ОЗП</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЭМ</td>
-                                <td>Индексы по статьям затрат ЭМ</td>
+                                <td class="fw-bold col-name">ЭМ</td>
+                                <td class="col-desc">Индексы по статьям затрат ЭМ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Ч</td>
-                                <td>Индексы по статьям затрат (Начислять индекс к чистой ЭМ в виде К*(ЭМ-ЗПМ))<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Ч</td>
+                                <td class="col-desc">Индексы по статьям затрат (Начислять индекс к чистой ЭМ в виде К*(ЭМ-ЗПМ))<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗПМ</td>
-                                <td>Индексы по статьям затрат ЗПМ</td>
+                                <td class="fw-bold col-name">ЗПМ</td>
+                                <td class="col-desc">Индексы по статьям затрат ЗПМ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МАТ</td>
-                                <td>Индексы по статьям затрат МАТ</td>
+                                <td class="fw-bold col-name">МАТ</td>
+                                <td class="col-desc">Индексы по статьям затрат МАТ</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">СМР</td>
-                                <td>Индексы по статьям затрат СМР</td>
+                                <td class="fw-bold col-name">СМР</td>
+                                <td class="col-desc">Индексы по статьям затрат СМР</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Примечания</td>
-                                <td>Примечания</td>
+                                <td class="fw-bold col-name">Примечания</td>
+                                <td class="col-desc">Примечания</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Гиперссылка</td>
-                                <td>Гиперссылка</td>
+                                <td class="fw-bold col-name">Гиперссылка</td>
+                                <td class="col-desc">Гиперссылка</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Раздел</td>
-                                <td>Наименование раздела</td>
+                                <td class="fw-bold col-name">Раздел</td>
+                                <td class="col-desc">Наименование раздела</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РазделП</td>
-                                <td>Примечания раздела</td>
+                                <td class="fw-bold col-name">РазделП</td>
+                                <td class="col-desc">Примечания раздела</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РазделГ</td>
-                                <td>Гиперссылка раздела</td>
+                                <td class="fw-bold col-name">РазделГ</td>
+                                <td class="col-desc">Гиперссылка раздела</td>
                             </tr>
                         </tbody>
                     </table>

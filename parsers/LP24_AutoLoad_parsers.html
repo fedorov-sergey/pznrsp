@@ -28,6 +28,18 @@
             font-size: 1.3rem !important;
             letter-spacing: 1.5px;
         }
+        .col-name {
+            white-space: nowrap;
+        }
+        @media (max-width: 575.98px) {
+            .col-name {
+                white-space: normal;
+                word-break: normal;
+            }
+            .col-desc {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,98 +115,98 @@
                     <table class="table table-bordered mb-0">
                         <thead class="table-primary">
                             <tr>
-                                <th style="width: 180px;">Столбец</th>
-                                <th>Описание</th>
+                                <th class="col-name">Столбец</th>
+                                <th class="col-desc">Описание</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Файл</td>
-                                <td>Файлы и вложения:<br>Пути с пометкой GrandLinks (GL) и Link (L)</td>
+                                <td class="fw-bold col-name">Файл</td>
+                                <td class="col-desc">Файлы и вложения:<br>Пути с пометкой GrandLinks (GL) и Link (L)</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Авто</td>
-                                <td>Автоматически загружать данные:<br><b>▣</b> — включено<br><b>□</b> — выключено</td>
+                                <td class="fw-bold col-name">Авто</td>
+                                <td class="col-desc">Автоматически загружать данные:<br><b>▣</b> — включено<br><b>□</b> — выключено</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ТЦ</td>
-                                <td>Текущие цены:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ТЦ</td>
+                                <td class="col-desc">Текущие цены:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">БЦ</td>
-                                <td>Базисные цены:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">БЦ</td>
+                                <td class="col-desc">Базисные цены:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Груз</td>
-                                <td>Классы грузов:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Груз</td>
+                                <td class="col-desc">Классы грузов:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Масса</td>
-                                <td>Масса брутто:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Масса</td>
+                                <td class="col-desc">Масса брутто:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Индексы</td>
-                                <td>Индексы:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Индексы</td>
+                                <td class="col-desc">Индексы:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Группы</td>
-                                <td>Группы однородных ресурсов:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Группы</td>
+                                <td class="col-desc">Группы однородных ресурсов:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Переопр</td>
-                                <td>Переопределить имеющиеся данные:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Переопр</td>
+                                <td class="col-desc">Переопределить имеющиеся данные:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">РИМдляР</td>
-                                <td>Определять Ресурсно-индексный метод для ресурсов:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">РИМдляР</td>
+                                <td class="col-desc">Определять Ресурсно-индексный метод для ресурсов:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Код</td>
-                                <td>Поля совпадения: Код:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Код</td>
+                                <td class="col-desc">Поля совпадения: Код:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Тип</td>
-                                <td>Поля совпадения: Код:Тип:<br><b>Игнорировать</b> - Игнорировать шифр сборника при сравнении<br><b>Точное</b> - Точное совпадение шифра</td>
+                                <td class="fw-bold col-name">Тип</td>
+                                <td class="col-desc">Поля совпадения: Код:Тип:<br><b>Игнорировать</b> - Игнорировать шифр сборника при сравнении<br><b>Точное</b> - Точное совпадение шифра</td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Обосн</td>
-                                <td>Поля совпадения: Обоснование расценок вместо кода индекса:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Обосн</td>
+                                <td class="col-desc">Поля совпадения: Обоснование расценок вместо кода индекса:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Наим</td>
-                                <td>Поля совпадения: Наименование:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Наим</td>
+                                <td class="col-desc">Поля совпадения: Наименование:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">Измер</td>
-                                <td>Поля совпадения: Измеритель:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">Измер</td>
+                                <td class="col-desc">Поля совпадения: Измеритель:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ИспТаб</td>
-                                <td>Использовать таблицу конвертации измерителей:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ИспТаб</td>
+                                <td class="col-desc">Использовать таблицу конвертации измерителей:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗТР</td>
-                                <td>Группы ресурсов: Затраты труда рабочих:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ЗТР</td>
+                                <td class="col-desc">Группы ресурсов: Затраты труда рабочих:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">ЗТМ</td>
-                                <td>Группы ресурсов: Затраты труда машинистов:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">ЗТМ</td>
+                                <td class="col-desc">Группы ресурсов: Затраты труда машинистов:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МиМ</td>
-                                <td>Группы ресурсов: Машины и механизмы:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">МиМ</td>
+                                <td class="col-desc">Группы ресурсов: Машины и механизмы:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">МАТ</td>
-                                <td>Группы ресурсов: Материалы:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">МАТ</td>
+                                <td class="col-desc">Группы ресурсов: Материалы:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">вЗатр</td>
-                                <td>Группы ресурсов: Ресурсы в затратных частях:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">вЗатр</td>
+                                <td class="col-desc">Группы ресурсов: Ресурсы в затратных частях:<br><b>▣/□</b></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold" style="white-space: nowrap;">вПоз</td>
-                                <td>Группы ресурсов: Ресурсы - позиции сметы:<br><b>▣/□</b></td>
+                                <td class="fw-bold col-name">вПоз</td>
+                                <td class="col-desc">Группы ресурсов: Ресурсы - позиции сметы:<br><b>▣/□</b></td>
                             </tr>
                         </tbody>
                     </table>
