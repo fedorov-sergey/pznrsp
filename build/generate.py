@@ -31,13 +31,13 @@ from collections import OrderedDict
 BUILD_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Путь к папке с .py файлами парсеров
-PARSERS_DIR = r"C:\Users\PC\Desktop\76 кл5\core\parsers"
+PARSERS_DIR = r"C:\Users\PC\Desktop\77 кл5\core\parsers"
 
 # Путь к папке со скриншотами
 PIC_DIR = os.path.join(PARSERS_DIR, "pic")
 
 # Путь к сайту (куда генерировать HTML)
-SITE_DIR = r"C:\Users\PC\Desktop\Сайт 260713 1013"
+SITE_DIR = r"C:\Users\PC\Desktop\Сайт 260714 0935"
 
 # Папка для страниц парсеров (относительно SITE_DIR)
 PARSERS_OUTPUT_DIR = os.path.join(SITE_DIR, "parsers")
@@ -273,15 +273,15 @@ def extract_columns_with_groups(source: str, class_node: ast.ClassDef) -> List[D
 
         # 4. Однострочная обычная строка
         if tooltip_text is None:
-            m = re.search(r"""['"]tooltip['"]:\s*['"](.+?)['"]""", line)
+            m = re.search(r"""['"]tooltip['"]:\s*(['"])(.*?)\1""", line)
             if m:
-                tooltip_text = m.group(1)
+                tooltip_text = m.group(2)
 
         # 5. Однострочная f-строка — после тройных кавычек
         if tooltip_text is None:
-            m = re.search(r"""['"]tooltip['"]:\s*f['"](.+?)['"]""", line)
+            m = re.search(r"""['"]tooltip['"]:\s*f(['"])(.*?)\1""", line)
             if m:
-                tooltip_text = resolve_f_string(m.group(1))
+                tooltip_text = resolve_f_string(m.group(2))
 
         if tooltip_text is not None and current_col_name:
             current_group_items.append({"name": current_col_name, "tooltip": tooltip_text})
@@ -299,10 +299,22 @@ def extract_columns_with_groups(source: str, class_node: ast.ClassDef) -> List[D
 
 def parse_name(full_name: str) -> Dict[str, str]:
     """Разбивает NAME на техническую и официальную части."""
-    match = re.match(r'^(\S+)\s+[╠╚║]?\s*(.+)$', full_name)
+    match = re.match(r'^(\S+)\s+(.+)$', full_name)
     if match:
         return {"code": match.group(1), "title": match.group(2).strip()}
     return {"code": "", "title": full_name}
+
+
+def format_path_display(path: str) -> str:
+    """Форматирует PATH для каталога: '01. ЛС/4. Другие/' → 'ЛС → Другие'."""
+    if not path:
+        return "Без группы"
+    path = path.rstrip("/")
+    match = re.match(r'^\S+\s+(.+)$', path)
+    if match:
+        path = match.group(1)
+    path = re.sub(r'/\d+\.\s*', ' → ', path)
+    return path
 
 
 def make_slug(filename: str) -> str:
@@ -360,6 +372,19 @@ def build_pic_html(pic: str, full_name: str) -> str:
             </div>'''
 
 
+def format_tooltip(text: str) -> str:
+    """Форматирует tooltip: переносы строк → <br>, убирает лишние отступы."""
+    if not text:
+        return ""
+    lines = text.split("\n")
+    cleaned = []
+    for line in lines:
+        stripped = line.strip()
+        if stripped:
+            cleaned.append(stripped)
+    return "<br>".join(cleaned)
+
+
 def build_columns_html(columns: list) -> str:
     """Генерирует HTML-фрагмент с таблицей столбцов."""
     if not columns:
@@ -373,10 +398,11 @@ def build_columns_html(columns: list) -> str:
         total += len(items)
 
         for item in items:
+            tooltip = format_tooltip(item.get("tooltip", ""))
             table_rows += f'''
                             <tr>
                                 <td class="fw-bold" style="white-space: nowrap;">{escape_html(item.get("name", ""))}</td>
-                                <td>{item.get("tooltip", "")}</td>
+                                <td>{tooltip}</td>
                             </tr>'''
 
     return f'''
@@ -415,18 +441,26 @@ def generate_parser_page(parser: Dict[str, Any], template: str) -> str:
     path = parser.get("PATH", "")
     columns = parser.get("COLUMNS", [])
 
-    title_text = f"{full_name} - Анализ смет"
-    meta_desc = description[:160] if description else f"Описание парсера {full_name}"
+    short_name = name_parts["title"] if name_parts["title"] else full_name
+    title_text = f"{short_name} - Анализ смет"
+    meta_desc_plain = re.sub(r'<[^>]+>', '', description) if description else ""
+    meta_desc = meta_desc_plain[:160] if meta_desc_plain else f"Описание парсера {full_name}"
     premium_badge = ' <i class="bi bi-star-fill text-warning"></i>' if premium else ""
+
+    # Полный путь: PATH + "/" + NAME
+    if path:
+        path_display = path.rstrip("/") + "/" + full_name
+    else:
+        path_display = full_name
 
     # Подставляем переменные в шаблон
     html = template
     html = html.replace("{{TITLE}}", escape_html(title_text))
     html = html.replace("{{META_DESC}}", escape_html(meta_desc))
-    html = html.replace("{{FULL_NAME}}", escape_html(full_name))
+    html = html.replace("{{FULL_NAME}}", escape_html(short_name))
     html = html.replace("{{PREMIUM_BADGE}}", premium_badge)
-    html = html.replace("{{PATH_DISPLAY}}", escape_html(path if path else name_parts.get("code", "")))
-    html = html.replace("{{DESCRIPTION}}", escape_html(description))
+    html = html.replace("{{PATH_DISPLAY}}", escape_html(path_display))
+    html = html.replace("{{DESCRIPTION}}", description if description else "")
     html = html.replace("{{PIC_HTML}}", build_pic_html(pic, full_name))
     html = html.replace("{{COLUMNS_HTML}}", build_columns_html(columns))
 
@@ -447,12 +481,13 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
     # Генерация аккордеона
     accordion_html = ""
     for idx, (path, group_parsers) in enumerate(sorted_groups.items()):
-        path_display = escape_html(path) if path else "Без группы"
+        path_display = escape_html(format_path_display(path)) if path else "Без группы"
 
         items_html = ""
         for p in group_parsers:
             slug = make_slug(p["file_name"])
             full_name = p["NAME"]
+            parser_display = escape_html(parse_name(full_name)["title"])
             columns_count = sum(len(g.get("items", [])) for g in p.get("COLUMNS", []))
             if columns_count == 0:
                 columns_count = len(p.get("COLUMNS", []))
@@ -461,7 +496,7 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
                         <a href="parsers/{slug}.html" class="text-decoration-none">
                             <div class="parser-item" data-name="{escape_html(full_name)}">
                                 <span class="icon blue"><i class="bi bi-table"></i></span>
-                                <span class="parser-name">{escape_html(full_name)}</span>
+                                <span class="parser-name">{parser_display}</span>
                                 <span class="parser-badge ms-auto">{columns_count} столбцов</span>
                             </div>
                         </a>'''
@@ -631,11 +666,14 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
 
             <!-- Поиск -->
             <div class="search-box">
-                <div class="input-group">
-                    <span class="input-group-text bg-white border-0">
+                <div class="input-group position-relative rounded">
+                    <span class="input-group-text bg-white border-0 rounded-start">
                         <i class="bi bi-search text-muted"></i>
                     </span>
-                    <input type="text" class="form-control border-0" id="parserSearch" placeholder="Найти парсер...">
+                    <input type="text" class="form-control border-0 rounded-end pe-5" id="parserSearch" placeholder="Найти парсер...">
+                    <button class="btn position-absolute top-50 end-0 translate-middle-y me-2 p-0 border-0 bg-transparent d-none" id="clearSearch" type="button" style="z-index: 5;">
+                        <i class="bi bi-x-lg text-muted"></i>
+                    </button>
                 </div>
             </div>
 
@@ -657,8 +695,8 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
             </div>
 
             <!-- Кнопки -->
-            <div class="text-center mt-4">
-                <button class="btn btn-outline-primary btn-lg me-2" onclick="collapseAll()">
+            <div class="mt-4 d-flex flex-wrap gap-2 justify-content-center">
+                <button class="btn btn-outline-primary btn-lg" onclick="collapseAll()">
                     <i class="bi bi-arrows-collapse"></i> Свернуть все
                 </button>
                 <button class="btn btn-outline-secondary btn-lg" onclick="expandAll()">
@@ -693,9 +731,14 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
 
     <!-- Скрипт -->
     <script>
-        // Поиск
-        document.getElementById('parserSearch').addEventListener('input', function(e) {{
-            var term = e.target.value.toLowerCase();
+        var searchInput = document.getElementById('parserSearch');
+        var clearBtn = document.getElementById('clearSearch');
+
+        function doSearch() {{
+            var term = searchInput.value.toLowerCase();
+            // Показывать/скрывать крестик
+            clearBtn.classList.toggle('d-none', searchInput.value === '');
+            // Фильтрация
             document.querySelectorAll('.parser-item').forEach(function(item) {{
                 var name = (item.getAttribute('data-name') || '').toLowerCase();
                 var text = item.textContent.toLowerCase();
@@ -716,6 +759,14 @@ def generate_catalog_page(parsers: List[Dict[str, Any]]) -> str:
                 if (item.closest('a').style.display !== 'none') visibleCount++;
             }});
             document.getElementById('parserCount').textContent = visibleCount;
+        }}
+
+        searchInput.addEventListener('input', doSearch);
+
+        clearBtn.addEventListener('click', function() {{
+            searchInput.value = '';
+            doSearch();
+            searchInput.focus();
         }});
 
         // Развернуть все
